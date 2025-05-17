@@ -1,6 +1,11 @@
+import ThemeSwitch from "./ThemeSwitch"
+
 function Header() {
     return (
-        <header>Header</header>
+        <header>Header
+
+            <ThemeSwitch />
+        </header>
     )
 }
 

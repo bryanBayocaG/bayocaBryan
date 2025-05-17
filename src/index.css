@@ -3,14 +3,20 @@
 
 /*color#18191B*/
 
+/*alsmostviolet#0f172a*/
+
 @theme {
-  --color-primary: #155dfc;
-  --color-primary-dark: #193cb8;
+  --color-primary: #062d77;
+  --color-primary-dark: #041037;
   --color-background: #ffffff;
 }
 
 html {
   font-size: 100%;
+}
+
+.hero-path {
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
 }
 
 /* @media (min-width: 640px) {

@@ -4,7 +4,7 @@ import ThemeSwitch from "./ThemeSwitch"
 
 function Header() {
     return (
-        <header className="flex justify-between px-4 py-2 shadow-lg dark:shadow-none items-center bg-transparent">
+        <header className="fixed top-0 w-full flex justify-between px-4 py-2 items-center bg-transparent z-20">
             <div className="h-12">
                 <img className="w-full h-full" src="/BYN.svg" alt="logo" />
             </div>

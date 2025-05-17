@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2882 1548">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-10);
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-9 {
+        opacity: .2;
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-11);
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-14 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2037.59" y1="1137.53" x2="2342.95" y2="1137.53" gradientUnits="userSpaceOnUse">
+      <stop offset=".16" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".26" stop-color="#fff" stop-opacity=".02"/>
+      <stop offset=".37" stop-color="#fff" stop-opacity=".06"/>
+      <stop offset=".47" stop-color="#fff" stop-opacity=".14"/>
+      <stop offset=".58" stop-color="#fff" stop-opacity=".26"/>
+      <stop offset=".69" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity=".58"/>
+      <stop offset=".9" stop-color="#fff" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1406.67" y1="1065.36" x2="1740.24" y2="1065.36" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="1864.26" y1="655.22" x2="2166.04" y2="655.22" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="730.6" y1="857.47" x2="1175.61" y2="857.47" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="397.61" y1="734.98" x2="500.3" y2="734.98" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="2111.8" y1="351.36" x2="2308.46" y2="351.36" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="1310.51" y1="612.17" x2="1580.14" y2="612.17" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="544.17" y1="1209.02" x2="913.57" y2="1209.02" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="1544.18" y1="287.96" x2="1889" y2="287.96" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-10" x1="402.77" y1="308.81" x2="619.2" y2="308.81" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-11" x1="609.38" y1="538.73" x2="695.39" y2="538.73" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="lines" class="cls-9">
+    <polygon class="cls-4" points="500.3 665.5 446.79 804.45 564.22 804.43 500.3 665.5"/>
+    <polygon class="cls-4" points="730.6 804.39 500.3 665.5 564.22 804.43 730.6 804.39"/>
+    <polygon class="cls-4" points="1018.88 724.44 500.3 665.5 730.6 804.39 1018.88 724.44"/>
+    <polygon class="cls-4" points="564.22 804.43 446.79 804.45 388.84 954.94 629.59 946.5 564.22 804.43"/>
+    <polygon class="cls-4" points="629.59 946.5 509.81 1130.13 544.17 1118.5 783.12 1040.5 629.59 946.5"/>
+    <polygon class="cls-4" points="388.84 954.94 401.86 1166.67 509.81 1130.13 629.59 946.5 388.84 954.94"/>
+    <polygon class="cls-4" points="1580.14 527.06 1544.18 335.24 1457.4 429.3 1580.14 527.06"/>
+    <polygon class="cls-4" points="1544.18 335.24 1250.19 264.25 1457.4 429.3 1544.18 335.24"/>
+    <polygon class="cls-4" points="1018.88 724.44 969.04 529.74 968.5 529.97 968.47 529.46 764.33 511.55 695.39 579.5 1018.88 724.44"/>
+    <polygon class="cls-4" points="1889 347.5 1544.18 335.24 1580.14 527.06 1889 347.5"/>
+    <polygon class="cls-4" points="1457.4 429.3 1250.19 264.25 1186.14 437.31 1310.51 588.52 1457.4 429.3"/>
+    <polygon class="cls-4" points="1310.51 588.52 1186.14 437.31 969.04 529.74 1018.88 724.44 1310.51 588.52"/>
+    <polygon class="cls-4" points="783.12 1040.5 913.57 1202.5 948.2 936.5 783.12 1040.5"/>
+    <polygon class="cls-4" points="2297.65 866.5 2482.33 968.02 2418.44 656.68 2297.65 866.5"/>
+    <polygon class="cls-4" points="1811.25 1101 2037.59 1276.24 2077.21 998.83 1811.25 1101"/>
+    <polygon class="cls-4" points="2077.21 998.83 2342.95 1161.93 2482.33 968.02 2297.65 866.5 2077.21 998.83"/>
+    <polygon class="cls-4" points="1740.24 927.97 1677.76 1256.5 1811.25 1101 1740.24 927.97"/>
+    <polygon class="cls-14" points="2037.59 1276.24 2342.95 1161.93 2077.21 998.83 2037.59 1276.24"/>
+    <polygon class="cls-4" points="544.17 1118.5 913.57 1202.5 783.12 1040.5 544.17 1118.5"/>
+    <polygon class="cls-4" points="1406.67 1202.75 1677.76 1256.5 1740.24 927.97 1406.67 1202.75"/>
+    <polygon class="cls-4" points="1899.26 567.26 1889 347.5 1580.14 527.06 1899.26 567.26"/>
+    <polygon class="cls-4" points="948.2 936.5 913.57 1202.5 1240.25 1161.5 1175.61 990.5 948.2 936.5"/>
+    <polygon class="cls-4" points="1257.07 791.82 1175.61 990.5 1240.25 1161.5 1486.13 1006.5 1257.07 791.82"/>
+    <polygon class="cls-1" points="1486.13 1006.5 1406.67 1202.75 1740.24 927.97 1486.13 1006.5"/>
+    <polygon class="cls-4" points="1677.76 1256.5 2037.59 1276.24 1811.25 1101 1677.76 1256.5"/>
+    <polygon class="cls-4" points="1864.26 743.18 1899.26 567.26 1555.46 795.05 1864.26 743.18"/>
+    <polygon class="cls-4" points="564.22 804.43 629.59 946.5 783.12 1040.5 948.2 936.5 730.6 804.39 564.22 804.43"/>
+    <polygon class="cls-4" points="1175.61 990.5 1257.07 791.82 1018.88 724.44 1175.61 990.5"/>
+    <polygon class="cls-4" points="2111.8 428.5 1899.26 567.26 2166.04 663.3 2111.8 428.5"/>
+    <polygon class="cls-4" points="1811.25 1101 2077.21 998.83 1740.24 927.97 1811.25 1101"/>
+    <polygon class="cls-6" points="2166.04 663.3 1899.26 567.26 1864.26 743.18 2166.04 663.3"/>
+    <polygon class="cls-5" points="730.6 804.39 948.2 936.5 1175.61 990.5 1018.88 724.44 730.6 804.39"/>
+    <polygon class="cls-4" points="958.68 319.98 764.33 511.55 968.47 529.46 958.68 319.98"/>
+    <polygon class="cls-4" points="2724.19 613.09 2721.92 613.41 2734 783.5 2724.19 613.09"/>
+    <polygon class="cls-4" points="387.95 955.24 388.84 954.94 388.33 954.5 387.95 955.24"/>
+    <polygon class="cls-7" points="397.61 804.47 446.79 804.45 500.3 665.5 397.61 804.47"/>
+    <polygon class="cls-4" points="257.68 425.47 256.18 466.98 363.29 476.38 450.67 347.5 257.68 425.47"/>
+    <polygon class="cls-4" points="2166.04 663.3 2308.46 419.63 2111.8 428.5 2166.04 663.3"/>
+    <polygon class="cls-4" points="2418.44 656.68 2308.46 419.63 2166.04 663.3 2418.44 656.68"/>
+    <polygon class="cls-4" points="2111.8 428.5 2106.95 302.08 1889 347.5 1899.26 567.26 2111.8 428.5"/>
+    <polygon class="cls-4" points="2240.58 274.23 2106.95 302.08 2111.8 428.5 2240.58 274.23"/>
+    <polygon class="cls-13" points="2308.46 419.63 2240.58 274.23 2111.8 428.5 2308.46 419.63"/>
+    <polygon class="cls-4" points="2297.65 866.5 2418.44 656.68 2166.04 663.3 2297.65 866.5"/>
+    <polygon class="cls-4" points="1864.26 743.18 2077.21 998.83 2297.65 866.5 2166.04 663.3 1864.26 743.18"/>
+    <polygon class="cls-10" points="1580.14 527.06 1457.4 429.3 1310.51 588.52 1555.46 795.05 1580.14 527.06"/>
+    <polygon class="cls-4" points="1310.51 588.52 1018.88 724.44 1257.07 791.82 1555.46 795.05 1310.51 588.52"/>
+    <polygon class="cls-4" points="1257.07 791.82 1486.13 1006.5 1740.24 927.97 1555.46 795.05 1257.07 791.82"/>
+    <polygon class="cls-4" points="1555.46 795.05 1740.24 927.97 2077.21 998.83 1864.26 743.18 1555.46 795.05"/>
+    <polygon class="cls-4" points="1899.26 567.26 1580.14 527.06 1555.46 795.05 1899.26 567.26"/>
+    <polygon class="cls-4" points="1240.25 1161.5 1406.67 1202.75 1486.13 1006.5 1240.25 1161.5"/>
+    <polygon class="cls-4" points="244.03 804.5 254.36 998.31 397.61 804.47 244.03 804.5"/>
+    <polygon class="cls-4" points="2342.95 1161.93 2626.91 1290.59 2482.33 968.02 2342.95 1161.93"/>
+    <polygon class="cls-4" points="500.3 665.5 244.03 804.5 397.61 804.47 500.3 665.5"/>
+    <polygon class="cls-4" points="387.95 955.24 388.33 954.5 388.84 954.94 446.79 804.45 397.61 804.47 254.36 998.31 254.42 999.5 387.95 955.24"/>
+    <polygon class="cls-4" points="254.42 999.5 254.36 998.31 253.85 999 253.98 1216.73 387.95 955.24 254.42 999.5"/>
+    <polygon class="cls-4" points="253.98 1216.73 409.11 1284.5 401.86 1166.67 253.98 1216.73"/>
+    <polygon class="cls-4" points="773.57 193.49 590.34 72.5 619.2 292.5 773.57 193.49"/>
+    <polygon class="cls-4" points="363.29 476.38 256.18 466.98 244.03 804.5 322.25 536.91 363.29 476.38"/>
+    <polygon class="cls-4" points="263.79 255.75 173 459.69 257.68 425.47 263.79 255.75"/>
+    <polygon class="cls-4" points="322.53 140.5 263.79 255.75 402.77 270.12 322.53 140.5"/>
+    <polygon class="cls-4" points="450.67 347.5 402.77 270.12 263.79 255.75 257.68 425.47 450.67 347.5"/>
+    <polygon class="cls-4" points="173 459.69 244.03 804.5 256.18 466.98 173 459.69"/>
+    <polygon class="cls-4" points="257.68 425.47 173 459.69 256.18 466.98 257.68 425.47"/>
+    <polygon class="cls-4" points="388.84 954.94 387.95 955.24 253.98 1216.73 401.86 1166.67 388.84 954.94"/>
+    <polygon class="cls-4" points="1677.76 1256.5 1759.72 1407.5 2037.59 1276.24 1677.76 1256.5"/>
+    <polygon class="cls-4" points="401.86 1166.67 409.11 1284.5 509.81 1130.13 401.86 1166.67"/>
+    <polygon class="cls-4" points="1406.67 1202.75 1301.43 1415.5 1677.76 1256.5 1406.67 1202.75"/>
+    <polygon class="cls-4" points="1759.72 1407.5 2175.91 1414.88 2037.59 1276.24 1759.72 1407.5"/>
+    <polygon class="cls-4" points="2037.59 1276.24 2175.91 1414.88 2342.95 1161.93 2037.59 1276.24"/>
+    <polygon class="cls-4" points="1240.25 1161.5 1095.96 1346.5 1301.43 1415.5 1406.67 1202.75 1240.25 1161.5"/>
+    <polygon class="cls-4" points="1301.43 1415.5 1759.72 1407.5 1677.76 1256.5 1301.43 1415.5"/>
+    <polygon class="cls-4" points="2175.91 1414.88 2626.91 1290.59 2342.95 1161.93 2175.91 1414.88"/>
+    <polygon class="cls-4" points="913.57 1202.5 1095.96 1346.5 1240.25 1161.5 913.57 1202.5"/>
+    <polygon class="cls-4" points="509.81 1130.13 409.11 1284.5 460.73 1446.11 544.17 1118.5 509.81 1130.13"/>
+    <polygon class="cls-8" points="544.17 1118.5 689.55 1299.54 913.57 1202.5 544.17 1118.5"/>
+    <polygon class="cls-4" points="689.55 1299.54 819.57 1461.46 1095.96 1346.5 913.57 1202.5 689.55 1299.54"/>
+    <polygon class="cls-4" points="460.73 1446.11 600.21 1338.24 689.55 1299.54 544.17 1118.5 460.73 1446.11"/>
+    <polygon class="cls-4" points="2240.58 274.23 2101.5 159.9 2106.95 302.08 2240.58 274.23"/>
+    <polygon class="cls-4" points="2106.95 302.08 2101.5 159.9 1889 347.5 2106.95 302.08"/>
+    <polygon class="cls-11" points="1889 347.5 1721.83 228.41 1544.18 335.24 1889 347.5"/>
+    <polygon class="cls-4" points="2101.5 159.9 1801.27 89.5 1721.83 228.41 1889 347.5 2101.5 159.9"/>
+    <polygon class="cls-4" points="1721.83 228.41 1457.27 159.5 1544.18 335.24 1721.83 228.41"/>
+    <polygon class="cls-4" points="1544.18 335.24 1457.27 159.5 1250.19 264.25 1544.18 335.24"/>
+    <polygon class="cls-4" points="2408.47 81.5 2101.5 159.9 2240.58 274.23 2408.47 81.5"/>
+    <polygon class="cls-4" points="2418.44 656.68 2721.92 613.41 2705.14 377.07 2308.46 419.63 2418.44 656.68"/>
+    <polygon class="cls-4" points="2734 783.5 2721.92 613.41 2418.44 656.68 2734 783.5"/>
+    <polygon class="cls-4" points="2308.46 419.63 2705.14 377.07 2240.58 274.23 2308.46 419.63"/>
+    <polygon class="cls-4" points="2608.83 185.77 2408.47 81.5 2240.58 274.23 2608.83 185.77"/>
+    <polygon class="cls-4" points="2705.14 377.07 2608.83 185.77 2240.58 274.23 2705.14 377.07"/>
+    <polygon class="cls-4" points="1457.27 159.5 1029.87 140.5 1250.19 264.25 1457.27 159.5"/>
+    <polygon class="cls-4" points="1029.87 140.5 773.57 193.49 958.68 319.98 1029.87 140.5"/>
+    <polygon class="cls-4" points="2482.33 968.02 2626.91 1290.59 2734 783.5 2482.33 968.02"/>
+    <polygon class="cls-4" points="1250.19 264.25 1029.87 140.5 1186.14 437.31 1250.19 264.25"/>
+    <polygon class="cls-4" points="2482.33 968.02 2734 783.5 2418.44 656.68 2482.33 968.02"/>
+    <polygon class="cls-3" points="555.22 493.21 609.38 497.96 566.63 457.43 555.22 493.21"/>
+    <polygon class="cls-3" points="695.39 579.5 609.38 497.96 555.22 493.21 500.3 665.5 1018.88 724.44 695.39 579.5"/>
+    <polygon class="cls-3" points="764.33 511.55 675.28 503.74 695.39 579.5 764.33 511.55"/>
+    <polygon class="cls-2" points="402.77 270.12 450.67 347.5 619.2 292.5 402.77 270.12"/>
+    <polygon class="cls-3" points="619.2 292.5 590.34 72.5 322.53 140.5 402.77 270.12 619.2 292.5"/>
+    <polygon class="cls-3" points="968.47 529.46 968.98 529.5 969.04 529.74 1186.14 437.31 1029.87 140.5 958.68 319.98 968.47 529.46"/>
+    <polygon class="cls-3" points="969.04 529.74 968.98 529.5 968.47 529.46 968.5 529.97 969.04 529.74"/>
+    <polygon class="cls-3" points="566.63 457.43 450.67 347.5 363.29 476.38 555.22 493.21 566.63 457.43"/>
+    <polygon class="cls-3" points="363.29 476.38 322.25 536.91 500.3 665.5 555.22 493.21 363.29 476.38"/>
+    <polygon class="cls-3" points="675.28 503.74 764.33 511.55 958.68 319.98 773.57 193.49 619.2 292.5 675.28 503.74"/>
+    <polygon class="cls-12" points="695.39 579.5 675.28 503.74 609.38 497.96 695.39 579.5"/>
+    <polygon class="cls-3" points="619.2 292.5 450.67 347.5 566.63 457.43 619.2 292.5"/>
+    <polygon class="cls-3" points="609.38 497.96 675.28 503.74 619.2 292.5 566.63 457.43 609.38 497.96"/>
+    <polygon class="cls-3" points="322.25 536.91 244.03 804.5 500.3 665.5 322.25 536.91"/>
+  </g>
+</svg>

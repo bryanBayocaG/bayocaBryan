@@ -1,8 +1,10 @@
-import React from 'react'
+
 
 function AboutSection() {
     return (
-        <div>AboutSection</div>
+        <section className='bg-blue-900'>
+            <div>AboutSection</div>
+        </section>
     )
 }
 

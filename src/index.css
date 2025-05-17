@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Base font-size using rem for better scaling */
+/* html {
+  font-size: 56.25%; 
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 68.75%; 
+  }
+} */

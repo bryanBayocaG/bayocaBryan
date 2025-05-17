@@ -1,16 +1,17 @@
 import Header from "./components/Header"
+import AboutSection from "./components/sections/AboutSection"
+import HeroSection from "./components/sections/HeroSection"
 
 function App() {
 
   return (
-    <>
+    <div className="dark:bg-[#0f172a] h-screen">
       <Header />
-      <main>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+      <main className="">
+        <HeroSection />
+        <AboutSection />
       </main>
-    </>
+    </div>
   )
 }
 

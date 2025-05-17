@@ -1,21 +1,19 @@
-@tailwind utilities;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*color#18191B*/
+
+@theme {
+  --color-primary: #155dfc;
+  --color-primary-dark: #193cb8;
+  --color-background: #ffffff;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
-/* Base font-size using rem for better scaling */
-/* html {
-  font-size: 56.25%; 
-}
-
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   html {
     font-size: 62.5%;
   }
@@ -23,6 +21,6 @@ html {
 
 @media (min-width: 1024px) {
   html {
-    font-size: 68.75%; 
+    font-size: 68.75%;
   }
 } */

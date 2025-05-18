@@ -72,7 +72,7 @@ function AboutSection() {
     return (
         <section className='bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] pt-[15rem] lg:pt-[8rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[50rem]'>
             <h2>About section</h2>
-            <div className="bg-white/10 backdrop-blur-lg flex flex-row gap-[1rem] shadow-lg p-[1rem] w-[45rem] lg:w-[70rem] rounded-[.5rem]">
+            <div className="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row gap-[1rem] shadow-lg p-[1rem] w-[35rem] md:w-[45rem] lg:w-[65rem] rounded-[.5rem]">
                 <div className="flex w-full bg-white text-black  items-center px-2">
                     <FaSearch />
                     <input
@@ -84,36 +84,38 @@ function AboutSection() {
                         className="bg-transparent p-2 focus:outline-none w-full"
                     />
                 </div>
-                <div>
-                    <label>Category</label>
-                    <select
-                        id="category"
-                        value={category || "all"}
-                        onChange={handleFilterChange}
-                        className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
-                    >
-                        <option className="text-neutral-600" value="all">All</option>
-                        <option className="text-neutral-600" value="framework">Framework</option>
-                        <option className="text-neutral-600" value="language">Language</option>
-                        <option className="text-neutral-600" value="library">Library</option>
-                        <option className="text-neutral-600" value="database">Database</option>
-                        <option className="text-neutral-600" value="design">Designing</option>
-                        <option className="text-neutral-600" value="tool">Tools</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Use for</label>
-                    <select id="useFor"
-                        value={designation || "all"}
-                        onChange={handleFilterChange}
-                        className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
-                    >
-                        <option className="text-neutral-600" value="all">All</option>
-                        <option className="text-neutral-600" value="frontend">Front-end</option>
-                        <option className="text-neutral-600" value="backend">Back-end</option>
-                        <option className="text-neutral-600" value="tool">Tools</option>
-                        <option className="text-neutral-600" value="design">Designing</option>
-                    </select>
+                <div className="flex justify-center gap-[1rem]">
+                    <div className="flex flex-row md:flex-col md:items-start gap-[.5rem] items-center">
+                        <label>Category</label>
+                        <select
+                            id="category"
+                            value={category || "all"}
+                            onChange={handleFilterChange}
+                            className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
+                        >
+                            <option className="text-neutral-600" value="all">All</option>
+                            <option className="text-neutral-600" value="framework">Framework</option>
+                            <option className="text-neutral-600" value="language">Language</option>
+                            <option className="text-neutral-600" value="library">Library</option>
+                            <option className="text-neutral-600" value="database">Database</option>
+                            <option className="text-neutral-600" value="design">Designing</option>
+                            <option className="text-neutral-600" value="tool">Tools</option>
+                        </select>
+                    </div>
+                    <div className="flex flex-row md:flex-col md:items-start gap-[.5rem] items-center">
+                        <label>Use for</label>
+                        <select id="useFor"
+                            value={designation || "all"}
+                            onChange={handleFilterChange}
+                            className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
+                        >
+                            <option className="text-neutral-600" value="all">All</option>
+                            <option className="text-neutral-600" value="frontend">Front-end</option>
+                            <option className="text-neutral-600" value="backend">Back-end</option>
+                            <option className="text-neutral-600" value="tool">Tools</option>
+                            <option className="text-neutral-600" value="design">Designing</option>
+                        </select>
+                    </div>
                 </div>
                 {searchTerm || category || designation ? (
                     <button onClick={handleClearFilters} className="bg-white/20 whitespace-nowrap p-[.5rem] rounded-[.3rem] hover:cursor-pointer hover:bg-white/40">

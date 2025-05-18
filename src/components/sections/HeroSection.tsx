@@ -2,18 +2,18 @@
 
 function HeroSection() {
     return (
-        <div
-            className="hero-path flex justify-center items-center h-[95vh] bg-[url(/polygonialBGW.svg)] dark:bg-[url(/polygonialBG.svg)] bg-center bg-size-[300%] md:bg-size-[200%] bg-no-repeat bg-[#f7f7f7] dark:bg-gray-900"
-        >
-            <section className="p-4 flex flex-col md:flex-row items-center justify-between w-full bg-red-700">
+        <section
+            className="hero-path relative h-[95vh] bg-[url(/polygonialBGW.svg)] dark:bg-[url(/polygonialBG.svg)] bg-center bg-size-[300%] md:bg-size-[200%] bg-no-repeat bg-[#f7f7f7] dark:bg-gray-900">
+            <div className="absolute top-[30%] flex flex-col md:flex-row items-center justify-between w-full p-5 px-10">
                 <div>
-                    <p>Hi there! I'm Bryan</p>
+                    <h1>Hi there! I'm <span className="">Bryan!</span></h1>
                 </div>
-                <div>
+                <div className="hidden md:block">
                     ppic ko
                 </div>
-            </section>
-        </div>
+            </div>
+
+        </section>
     )
 }
 

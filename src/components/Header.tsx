@@ -4,22 +4,22 @@ import ThemeSwitch from "./ThemeSwitch"
 
 function Header() {
     return (
-        <header className="fixed top-0 w-full flex justify-between px-4 py-2 items-center bg-transparent z-20">
-            <div className="h-12">
+        <header className="fixed top-0 w-full flex justify-between px-[2rem] py-[2rem] items-center bg-transparent z-20">
+            <div className="h-[5rem]">
                 <img className="w-full h-full" src="/BYN.svg" alt="logo" />
             </div>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-[2rem]">
                 <ThemeSwitch />
                 <a
                     href="https://github.com/bryanBayocaG"
                     rel="noopener noreferrer"
                     target="_blank"
                     className={
-                        "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                     }
                 >
-                    <FaGithub className="w-7 h-7" />
-                    <span className="hidden md:block text-sm !cursor-pointer">
+                    <FaGithub className="w-[3rem] h-[3rem]" />
+                    <span className="hidden md:block text-[1rem] !cursor-pointer">
                         Github
                     </span>
                 </a>
@@ -28,11 +28,11 @@ function Header() {
                     rel="noopener noreferrer"
                     target="_blank"
                     className={
-                        "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                     }
                 >
-                    <FaLinkedin className="w-7 h-7" />
-                    <span className="hidden md:block text-sm !cursor-pointer">
+                    <FaLinkedin className="w-[3rem] h-[3rem]" />
+                    <span className="hidden md:block text-[1rem] !cursor-pointer">
                         Linkedin
                     </span>
                 </a>

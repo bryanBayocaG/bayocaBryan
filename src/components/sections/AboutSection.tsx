@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import TechStackIcon from "../TechStackIcon";
+import NotFound from "../NotFound";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -36,13 +37,46 @@ function AboutSection() {
         }
         navigate(`?${params.toString()}`, { replace: true });
     };
+    const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const { id, value } = e.target;
+        const params = new URLSearchParams(location.search);
+
+        if (id === "category") {
+            if (value === "all") {
+                params.delete("category");
+            } else {
+                params.set("category", value);
+            }
+        }
+
+        if (id === "useFor") {
+            if (value === "all") {
+                params.delete("designation");
+            } else {
+                params.set("designation", value);
+            }
+        }
+
+        navigate(`?${params.toString()}`, { replace: true });
+    };
+    const handleClearFilters = () => {
+        setSearchTerm("");
+
+        const params = new URLSearchParams(location.search);
+        params.delete("search");
+        params.delete("category");
+        params.delete("designation");
+
+        navigate(`?${params.toString()}`, { replace: true });
+    };
     return (
-        <section className='bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] pt-[15rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[60rem]'>
+        <section className='bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] pt-[15rem] lg:pt-[8rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[50rem]'>
             <h2>About section</h2>
             <div className="bg-white/10 backdrop-blur-lg flex flex-row gap-[1rem] shadow-lg p-[1rem] w-[45rem] lg:w-[70rem] rounded-[.5rem]">
                 <div className="flex w-full bg-white text-black  items-center px-2">
                     <FaSearch />
                     <input
+                        id='searchbar'
                         type="text"
                         placeholder="Search tech..."
                         value={searchTerm}
@@ -53,7 +87,9 @@ function AboutSection() {
                 <div>
                     <label>Category</label>
                     <select
-                        defaultValue="all"
+                        id="category"
+                        value={category || "all"}
+                        onChange={handleFilterChange}
                         className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
                     >
                         <option className="text-neutral-600" value="all">All</option>
@@ -67,7 +103,9 @@ function AboutSection() {
                 </div>
                 <div>
                     <label>Use for</label>
-                    <select name="" id="" defaultValue={'all'}
+                    <select id="useFor"
+                        value={designation || "all"}
+                        onChange={handleFilterChange}
                         className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
                     >
                         <option className="text-neutral-600" value="all">All</option>
@@ -77,6 +115,11 @@ function AboutSection() {
                         <option className="text-neutral-600" value="design">Designing</option>
                     </select>
                 </div>
+                {searchTerm || category || designation ? (
+                    <button onClick={handleClearFilters} className="bg-white/20 whitespace-nowrap p-[.5rem] rounded-[.3rem] hover:cursor-pointer hover:bg-white/40">
+                        Clear Filters
+                    </button>
+                ) : null}
             </div>
             <div className="grid grid-cols-4 lg:grid-cols-6 gap-[1rem]  p-[1.5rem] ">
                 {filteredTech.length > 0 ? (
@@ -91,7 +134,9 @@ function AboutSection() {
                         }
                     </>
                 ) : (
-                    <p className="col-span-4">Nothing matches</p>
+                    <div className="col-span-4 lg:col-span-6">
+                        <NotFound />
+                    </div>
                 )}
             </div>
         </section>

@@ -2,6 +2,7 @@ import { techStack } from "../../data/data"
 import { useState, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
+import TechStackIcon from "../TechStackIcon";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -36,9 +37,9 @@ function AboutSection() {
         navigate(`?${params.toString()}`, { replace: true });
     };
     return (
-        <section className='bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] pt-[15rem] flex flex-col justify-center items-center text-white gap-[1rem]'>
+        <section className='bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] pt-[15rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[60rem]'>
             <h2>About section</h2>
-            <div className="bg-white/10 backdrop-blur-lg flex flex-row gap-[1rem] shadow-lg p-[1rem] w-[85vw] rounded-[.5rem]">
+            <div className="bg-white/10 backdrop-blur-lg flex flex-row gap-[1rem] shadow-lg p-[1rem] w-[45rem] lg:w-[70rem] rounded-[.5rem]">
                 <div className="flex w-full bg-white text-black  items-center px-2">
                     <FaSearch />
                     <input
@@ -77,14 +78,21 @@ function AboutSection() {
                     </select>
                 </div>
             </div>
-            <div className="flex flex-col gap-[1rem]">
-                {filteredTech.length > 0 ?
-                    filteredTech.map((tech, i) => (
-                        <p key={i}>{tech.name}</p>
-                    ))
-                    :
-                    (<p>Nothing matches</p>)
-                }
+            <div className="grid grid-cols-4 lg:grid-cols-6 gap-[1rem]  p-[1.5rem] ">
+                {filteredTech.length > 0 ? (
+                    <>
+                        <div className="col-span-4 lg:col-span-6">
+                            <p className="text-center">List of my stack</p>
+                        </div>
+                        {
+                            filteredTech.map((tech, i) => (
+                                <TechStackIcon key={i} image={tech.img} name={tech.name} />
+                            ))
+                        }
+                    </>
+                ) : (
+                    <p className="col-span-4">Nothing matches</p>
+                )}
             </div>
         </section>
     )

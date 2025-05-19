@@ -6,16 +6,19 @@ import NotFoundPage from "./pages/NotFoundPage"
 
 function App() {
   return (
-    <div className="dark:bg-[#18191B] h-screen relative text-neutral-600 dark:text-white">
-      {/*  <div className="dark:bg-[#18191B] h-screen"> */}
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    /*<div className="h-screen relative text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a]"> */
+    <>
+      <BrowserRouter  >
+        <div className=" text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a]">
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter >
+    </>
+    /*</div>*/
   )
 }
 

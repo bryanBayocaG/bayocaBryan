@@ -29,7 +29,7 @@ function Footer() {
                 <FooterSiteMap />
                 <div className="flex flex-1 flex-col items-center md:items-end gap-y-[1rem]">
                     <h5 className="font-bold text-center whitespace-nowrap">
-                        C'mon! let's <span className="text-blue-700">Connect!</span>
+                        C'mon! let's <span className="text-primary font-bold">Connect!</span>
                     </h5>
 
                     <div className="flex items-center md:gap-3 gap-6">
@@ -60,7 +60,7 @@ function Footer() {
                     </a>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center p-3">
+            <div className="flex flex-col justify-center items-center p-[.5rem]">
                 <p className="text-[1.3rem] text-gray-500">
                     © Bryan Bayoca 2024–2025. All rights reserved.
                 </p>

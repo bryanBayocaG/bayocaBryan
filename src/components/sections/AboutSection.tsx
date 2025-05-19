@@ -70,7 +70,9 @@ function AboutSection() {
         navigate(`?${params.toString()}`, { replace: true });
     };
     return (
-        <section className='about-path bg-[#0078d4] dark:bg-primary-dark -mt-[20vh] py-[15rem]  lg:py-[8rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[50rem]'>
+        <section
+            id="about"
+            className='about-path bg-primary dark:bg-primary-dark -mt-[20vh] py-[15rem]  lg:py-[8rem] flex flex-col justify-center items-center text-white gap-[1rem] min-h-[50rem]'>
             <h2>About section</h2>
             <div className="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row gap-[1rem] shadow-lg p-[1rem] w-[35rem] md:w-[45rem] lg:w-[65rem] rounded-[.5rem]">
                 <div className="flex w-full bg-white text-black  items-center px-2">

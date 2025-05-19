@@ -15,7 +15,7 @@ function Header() {
                     rel="noopener noreferrer"
                     target="_blank"
                     className={
-                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 hover:text-primary"
                     }
                 >
                     <FaGithub className="w-[2rem] h-[2rem]" />
@@ -28,7 +28,7 @@ function Header() {
                     rel="noopener noreferrer"
                     target="_blank"
                     className={
-                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                        "relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 hover:text-primary"
                     }
                 >
                     <FaLinkedin className="w-[2rem] h-[2rem]" />

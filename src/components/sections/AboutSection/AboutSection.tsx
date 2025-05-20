@@ -1,9 +1,9 @@
-import { techStack } from "../../data/data"
+import { techStack } from "../../../data/data"
 import { useState, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
-import TechStackIcon from "../TechStackIcon";
-import NotFound from "../NotFound";
+import TechStackIcon from "../../TechStackIcon";
+import NotFound from "../../NotFound";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);

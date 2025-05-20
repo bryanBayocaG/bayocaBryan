@@ -1,6 +1,6 @@
-import HeroSection from '../components/sections/HeroSection'
-import AboutSection from '../components/sections/AboutSection'
-import ProjectSections from '../components/sections/ProjectSections'
+import HeroSection from '../components/sections/HeroSection/HeroSection'
+import AboutSection from '../components/sections/AboutSection/AboutSection'
+import ProjectSections from '../components/sections/ProjectSection/ProjectSections'
 import Footer from '../components/Footer'
 
 function HomePage() {

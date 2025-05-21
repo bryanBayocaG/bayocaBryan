@@ -80,7 +80,6 @@ function SearchBar({ setTechStack }: SearchBarProps) {
         params.delete("searchTerm");
         params.delete("useFor");
         params.delete("category");
-
         navigate(`?${params.toString()}`, { replace: true });
     };
 

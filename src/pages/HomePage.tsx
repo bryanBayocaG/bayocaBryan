@@ -1,5 +1,5 @@
 import HeroSection from '../components/sections/HeroSection/HeroSection'
-import AboutSection from '../components/sections/AboutSection/AboutSection'
+import TechStackection from '../components/sections/TechStackSection/TechStackSection'
 import ProjectSections from '../components/sections/ProjectSection/ProjectSections'
 import Footer from '../components/Footer'
 
@@ -8,7 +8,7 @@ function HomePage() {
         <>
             <main className="">
                 <HeroSection />
-                <AboutSection />
+                <TechStackection />
                 <ProjectSections />
             </main>
             <Footer />

@@ -1,42 +1,38 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ThemeSwitch from "./ThemeSwitch";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 function Header() {
     const [scrollValue, setScrollValue] = useState(0);
+    const headerRef = useRef<HTMLElement | null>(null);
     useEffect(() => {
-        gsap.fromTo(
-            ".header",
-            { y: -100, opacity: 0 },
-            {
+        const ctx = gsap.context(() => {
+            gsap.fromTo(headerRef.current, { y: -100 }, {
                 y: 0,
-                opacity: 1,
-                duration: 0.5,
+                duration: 1.5,
                 ease: "power2.out",
-            }
-        );
+            });
+        }, headerRef);
+
+        return () => ctx.revert();
     }, []);
 
     useEffect(() => {
         let lastScroll = window.scrollY;
+        const anim = gsap.quickTo(headerRef.current, "y", {
+            duration: 0.8,
+            ease: "power2.out",
+        });
 
         const handleScroll = () => {
             const currentScroll = window.scrollY;
             const scrollingUp = currentScroll < lastScroll;
 
             if (currentScroll > 200 && !scrollingUp) {
-                gsap.to(".header", {
-                    y: -150,
-                    duration: 0.8,
-                    ease: "power2.out",
-                });
+                anim(-150);
             } else {
-                gsap.to(".header", {
-                    y: 0,
-                    duration: 0.8,
-                    ease: "power2.out",
-                });
+                anim(0);
             }
 
             lastScroll = currentScroll;
@@ -44,11 +40,13 @@ function Header() {
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return (
-        <header className={`header fixed top-0 w-[95vw] left-1/2 -translate-x-1/2 rounded-b-[1rem] flex justify-between px-[2rem] py-[2rem] items-center z-20 ${scrollValue > 0 ? 'backdrop-blur-[.5rem]' : 'bg-transparent'} `}>
+        <header ref={headerRef} className={`header fixed top-0 w-[95vw] left-1/2 -translate-x-1/2 rounded-b-[1rem] flex justify-between px-[2rem] py-[2rem] items-center z-20 ${scrollValue > 0 ? 'backdrop-blur-[.5rem]' : 'bg-transparent'} `}>
             <div className="h-[4rem]">
                 <img className="w-full h-full" src="/BYN.svg" alt="logo" />
             </div>

@@ -22,7 +22,7 @@ function SectionHeader({ sectionName }: Props) {
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: headerRef.current,
-                        start: "top 50%",
+                        start: "top 70%",
                         toggleActions: "play none none none",
                     },
                 }
@@ -38,7 +38,7 @@ function SectionHeader({ sectionName }: Props) {
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: headerRef.current,
-                        start: "top 50%",
+                        start: "top 70%",
                         toggleActions: "play none none none",
                     },
                 }

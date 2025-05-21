@@ -129,7 +129,7 @@ function SearchBar({ setTechStack }: SearchBarProps) {
                     </select>
                 </div>
             </div>
-            {serachData ? (
+            {serachData.searchTerm != '' || serachData.useFor != 'all' || serachData.category != 'all' ? (
                 <button onClick={handleClearFilters} className="bg-white/20 whitespace-nowrap p-[.5rem] rounded-[.3rem] hover:cursor-pointer hover:bg-white/40">
                     Clear Filters
                 </button>

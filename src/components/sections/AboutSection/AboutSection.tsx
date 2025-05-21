@@ -1,12 +1,12 @@
 import SectionHeader from "../../SectionHeader"
 
 
-function ProjectSections() {
+function AboutSection() {
     return (
         <section className="flex justify-center p-[4rem]">
-            <SectionHeader sectionName="Things I’ve Made" />
+            <SectionHeader sectionName="My Path in Tech" />
         </section>
     )
 }
 
-export default ProjectSections
+export default AboutSection

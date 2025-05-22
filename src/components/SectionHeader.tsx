@@ -47,7 +47,7 @@ function SectionHeader({ sectionName }: Props) {
         return () => ctx.revert();
     }, []);
     return (
-        <div ref={headerRef} className="flex flex-col justify-center items-center">
+        <div ref={headerRef} className="flex w-fit mx-auto flex-col justify-center items-center">
             <h2>{sectionName}</h2>
             <div ref={borderRef} className="border border-b-[.5rem] w-full rounded-b-full" />
         </div>

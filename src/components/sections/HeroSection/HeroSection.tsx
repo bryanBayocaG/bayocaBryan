@@ -2,8 +2,8 @@ import gsap from 'gsap'
 import { useEffect, useRef } from 'react';
 
 function HeroSection() {
-    const nonColorMeRef = useRef<HTMLElement | null>(null);
-    const coloredMeRef = useRef<HTMLElement | null>(null);
+    const nonColorMeRef = useRef<HTMLDivElement | null>(null);
+    const coloredMeRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.fromTo(nonColorMeRef.current, { y: 300, opacity: 0 }, {

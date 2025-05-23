@@ -13,9 +13,9 @@ function AboutSection() {
         const ctx = gsap.context(() => {
             gsap.fromTo(
                 border1.current,
-                { x: -50, opacity: 0 },
+                { scaleX: 0, opacity: 0, transformOrigin: "left center" },
                 {
-                    x: 1,
+                    scaleX: 1,
                     delay: 0.5,
                     opacity: 1,
                     duration: 1,
@@ -29,10 +29,10 @@ function AboutSection() {
             );
             gsap.fromTo(
                 border2.current,
-                { y: -50, opacity: 0 },
+                { scaleY: 0, opacity: 0, transformOrigin: "top center" },
                 {
-                    y: 1,
-                    delay: 1,
+                    scaleY: 1,
+                    delay: 0.5,
                     opacity: 1,
                     duration: 1,
                     ease: "power2.out",
@@ -45,10 +45,10 @@ function AboutSection() {
             );
             gsap.fromTo(
                 border3.current,
-                { x: 50, opacity: 0 },
+                { scaleX: 0, opacity: 0, transformOrigin: "right center" },
                 {
-                    x: 1,
-                    delay: 1.5,
+                    scaleX: 1,
+                    delay: 0.5,
                     opacity: 1,
                     duration: 1,
                     ease: "power2.out",
@@ -65,14 +65,10 @@ function AboutSection() {
     return (
         <section className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
             <SectionHeader sectionName="My Path in Tech" />
-            <div className="flex flex-col md:flex-row gap-[1rem] h-full ">
-                <div className="flex-1 ">
-                    <div ref={border1} className=" h-full p-[1rem] border-2 rounded-[1rem] border-neutral-200 shadow-md">01</div>
-                </div>
-                <div className="flex-1 flex flex-col gap-[1rem]">
-                    <div ref={border2} className=" flex-1 h-full p-[1rem] border-2 rounded-[1rem] border-neutral-200 shadow-md">02</div>
-                    <div ref={border3} className=" flex-2 h-full p-[1rem] border-2 rounded-[1rem] border-neutral-200 shadow-md">03</div>
-                </div>
+            <div className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
+                <div ref={border1} className="flex justify-center items-center border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">01</div>
+                <div ref={border2} className="flex justify-center items-center border-2 boder-neutral-200 lg:col-span-2 lg:row-span-2 rounded-[.5rem]">02</div>
+                <div ref={border3} className="flex justify-center items-center border-2 boder-neutral-200 lg:col-span-2 rounded-[.5rem]">03</div>
             </div>
         </section>
     )

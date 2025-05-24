@@ -9,7 +9,7 @@ import { TbApi } from "react-icons/tb";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './style.css'
 
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative, Autoplay, Pagination } from 'swiper/modules';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,6 +86,14 @@ function AboutSection() {
                         <Swiper
                             grabCursor={true}
                             effect={'creative'}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+
                             creativeEffect={{
                                 prev: {
                                     shadow: true,
@@ -95,7 +103,7 @@ function AboutSection() {
                                     translate: ['100%', 0, 0],
                                 },
                             }}
-                            modules={[EffectCreative]}
+                            modules={[EffectCreative, Autoplay, Pagination]}
                             className="mySwiper w-full h-full"
                         >
                             <SwiperSlide className="w-full h-full bg-red-700">Slide 1</SwiperSlide>

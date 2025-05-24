@@ -30,24 +30,32 @@ function HeroSection() {
             <div className="absolute flex  flex-col md:flex-row items-center justify-between w-full h-full ">
                 <div className="w-full h-full  relative">
                     <div ref={nonColorMeRef} className="absolute right-0 bottom-[4.5rem] md:bottom-none md:top-[15rem] h-[50rem] lg:top-2 lg:h-[55rem] ">
-                        <img src="/bryanLeft.png" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} />
+                        <img src="/bryanLeftWEBP.webp" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} />
+                        {/* <img src="/bryanLeft.png" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} /> */}
                     </div>
-                    <div className='text-primary mt-[30%] flex flex-col justify-center items-center  w-fit mx-auto relative bg-white/60 p-1'>
-                        <div className='absolute left-[5rem] top-3'>
+                    <div className='mt-[30%] flex flex-col justify-center items-center w-fit mx-auto md:mx-0 md:mr-auto relative p-[1rem]'>
+                        <div className='absolute left-[5rem] top-7'>
                             <p className='text-[1.5rem] font-bold'>I do</p>
                         </div>
                         <p className='text-[5rem] font-extrabold'>&lt;coding&gt;</p>
                     </div>
+                    <div className='-mt-[2rem] w-[20rem] flex flex-col justify-center items-center mx-auto md:mx-0 md:mr-auto relative p-[1rem]'>
+                        <p className='text-justify'>I am a full-stack developer, I'm proficient in PHP and JavaScript, building full-stack applications that are both functional and visually polished.</p>
+                    </div>
                 </div>
                 <div className="hidden md:block w-full h-full  relative">
                     <div ref={coloredMeRef} className="absolute left-0 top-[15rem]  h-[50rem]  lg:top-2 lg:h-[55rem] ">
-                        <img src="/bryanRight.png" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} />
+                        <img src="/bryanRightWEBP.webp" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} />
+                        {/* <img src="/bryanRight.png" className="pointer-events-none w-full h-full" alt="bryan photo" draggable={false} /> */}
                     </div>
-                    <div className='text-primary mt-[30%] flex flex-col justify-center items-center w-fit mx-auto relative bg-white/60 p-1'>
-                        <div className='absolute left-[5rem] top-3'>
+                    <div className=' mt-[30%] flex flex-col justify-end items-center w-fit ml-auto relative p-[1rem]'>
+                        <div className='absolute left-[5rem] top-7'>
                             <p className='text-[1.5rem] font-bold'>I do</p>
                         </div>
-                        <p className='text-[5rem] font-bold'>designing</p>
+                        <p className='text-[5rem] font-bold'>design</p>
+                    </div>
+                    <div className='flex -mt-[2rem] w-[20rem] flex-col justify-end items-center ml-auto relative p-[1rem] bg-white/30'>
+                        <p className='text-justify'>I create my own image assets and logos from scratch. I'm highly proficient with Photoshop and Illustrator, bringing concepts to life with creativity.</p>
                     </div>
                 </div>
             </div>

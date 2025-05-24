@@ -7,6 +7,7 @@ import { GrOptimize } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
 import { TbApi } from "react-icons/tb";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { certificates } from '../../../data/data'
 import './style.css'
 
 import { EffectCreative, Autoplay, Pagination } from 'swiper/modules';
@@ -14,6 +15,7 @@ import { EffectCreative, Autoplay, Pagination } from 'swiper/modules';
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutSection() {
+
     const border1 = useRef<HTMLDivElement>(null);
     const border2 = useRef<HTMLDivElement>(null);
     const border3 = useRef<HTMLDivElement>(null);
@@ -75,7 +77,7 @@ function AboutSection() {
         <section className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
             <SectionHeader sectionName="My Path in Tech" />
             <div ref={containerRef} className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
-                <div ref={border1} className="grid grid-cols-5 md:grid-cols-7  p-[.5rem] gap-[.5rem] border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
+                <div ref={border1} className="relative grid grid-cols-5 md:grid-cols-7   p-[.5rem] gap-[.5rem] border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
                     <div className="flex flex-col col-span-2 justify-start">
                         <div className="my-auto p-[.5rem]">
                             <p>I love to learn new and earn</p>
@@ -106,16 +108,24 @@ function AboutSection() {
                             modules={[EffectCreative, Autoplay, Pagination]}
                             className="mySwiper w-full h-full"
                         >
-                            <SwiperSlide className="w-full h-full bg-red-700">Slide 1</SwiperSlide>
-                            <SwiperSlide className="w-full h-full bg-green-700">Slide 1</SwiperSlide>
-                            <SwiperSlide className="w-full h-full bg-yellow-700">Slide 1</SwiperSlide>
+                            {certificates.map((cert, i) => (
+                                <SwiperSlide key={i} className="w-full h-full">
+                                    <a href={cert.link} target="_blank">
+                                        <img src={cert.imgUrl} className="object-contain" alt={cert.name} />
+                                    </a>
+                                </SwiperSlide>
+                            ))
+
+                            }
+
+
                         </Swiper>
                     </div>
                 </div>
                 <div ref={border2} className="grid grid-cols-5 md:grid-cols-7 border-2 boder-neutral-200 lg:col-span-2 lg:row-span-2 rounded-[1rem] overflow-hidden">
                     <div className="flex flex-col col-span-2 justify-start">
                         <div className="my-auto p-[.5rem]">
-                            <p>I constantly try to improve</p>
+                            <p>I constantly improve</p>
                             <p className="text-[2rem] font-extrabold">My Insights</p>
                         </div>
                     </div>

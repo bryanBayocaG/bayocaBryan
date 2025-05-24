@@ -271,27 +271,33 @@ export const projects: Project[] = [
 
 export const certificates: CertificateItem[] = [
   {
-    id: 1,
-    name: "College Deploma",
-    link: "",
-    imgUrl: "/certificate/",
+    id: 0,
+    name: "Javascript Asynchronous Function",
+    link: "https://www.linkedin.com/learning/certificates/ea04657ac3955812c07876f6f28e31948c67f72ab35e61461111fd2fe716874b",
+    imgUrl: "/certificate/javascript_async.jpg",
   },
+  // {
+  //   id: 1,
+  //   name: "College Deploma",
+  //   link: "",
+  //   imgUrl: "/certificate/",
+  // },
   {
     id: 2,
     name: "OJT Completion Certificate",
-    link: "",
-    imgUrl: "/certificate/",
+    link: "https://drive.google.com/file/d/17hwEtZR4RfdgoQjGaoo88d0ZsTVvdKNw/view?usp=sharing",
+    imgUrl: "/certificate/ojt_cert.jpg",
   },
   {
     id: 3,
     name: "Git Version Control",
-    link: "",
-    imgUrl: "/certificate/",
+    link: "https://www.linkedin.com/learning/certificates/b970680c8cf6ffee36e3ba22fa0b75f329b58457b8149c404952a7ac2a81347c?trk=share_certificate",
+    imgUrl: "/certificate/version_control.jpg",
   },
   {
     id: 4,
     name: "MERN stack development",
-    link: "",
-    imgUrl: "/certificate/",
+    link: "https://www.udemy.com/certificate/UC-30f82cc7-6728-4138-84e1-efd76e4c8450/",
+    imgUrl: "/certificate/mern_cert.jpg",
   },
 ];

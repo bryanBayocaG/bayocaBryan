@@ -21,6 +21,10 @@ function IdoDesign() {
                 const chars = mySplitText.chars;
                 const elem = chars[0];
                 const rect = elem.getBoundingClientRect();
+                const colors = ['#ff595e', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93', '#f72585', '#00f5d4'];
+                chars.forEach((char, i) => {
+                    (char as HTMLElement).style.color = colors[i % colors.length];
+                });
                 gsap.set(chars, {
                     transformOrigin: 'center bottom'
                 });
@@ -30,13 +34,26 @@ function IdoDesign() {
                     fontStretch: 80,
                     scaleY: 2,
                     ease: "elastic(0.2, 0.1)",
-                    duration: 1.5,
+                    duration: 1,
                     delay: 0.5,
                     stagger: {
                         each: 0.05,
                         from: 'random'
                     }
                 }, 0);
+
+                // Revert colors after animation
+                tl.to(chars, {
+                    color: '', // Or use inherit if you want it to go back to original
+                    fontWeight: '',
+                    fontStretch: '',
+                    duration: 0.5,
+                    delay: 0.3,
+                    stagger: {
+                        each: 0.03,
+                        from: 'start'
+                    }
+                });
                 gsap.fromTo(
                     [textRef1.current, textRef2.current],
                     { opacity: 0, },

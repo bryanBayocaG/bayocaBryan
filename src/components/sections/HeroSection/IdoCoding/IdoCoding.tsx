@@ -20,7 +20,7 @@ function IdoCoding() {
                         x: 0,
                         opacity: 1,
                         color: '#00FF00',
-                        duration: 1.2,
+                        duration: 2,
                         scrambleText: {
                             text: p.textContent ?? '',
                             chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',

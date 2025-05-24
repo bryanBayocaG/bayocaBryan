@@ -44,9 +44,11 @@ function Header() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+    // -translate-x-1/2
 
     return (
-        <header ref={headerRef} className={`header fixed top-0 w-[95vw] left-1/2 -translate-x-1/2 rounded-b-[1rem] flex justify-between px-[2rem] py-[2rem] items-center z-20 ${scrollValue > 0 ? 'backdrop-blur-[.5rem]' : 'bg-transparent'} `}>
+        <header ref={headerRef} className={`header fixed top-0 w-[100%] flex justify-between px-[2rem] py-[2rem] items-center z-20 transition-colors ${scrollValue > 0 ? 'backdrop-blur-[.5rem] bg-white/50 shadow-2xl dark:bg-transparent' : 'bg-transparent'}`}>
+            {/* <header ref={headerRef} className={`header fixed w-full top-0 rounded-b-[1rem] flex justify-between px-[2rem] py-[2rem] items-center z-20 transition-all duration-300 ${scrollValue > 0 ? 'backdrop-blur-[.5rem] bg-white/50 shadow-2xl ' : 'bg-transparent'}`}> */}
             <div className="h-[4rem]">
                 <img className="w-full h-full" src="/BYN.svg" alt="logo" />
             </div>

@@ -17,9 +17,16 @@ export interface Project {
   name: string;
   description?: string;
   techStack: string[];
-  sourceCodeUrl: string;
-  liveUrl: string;
+  sourceCodeUrl?: string;
+  liveUrl?: string;
   status: "done" | "in-progress";
+}
+
+export interface CertificateItem {
+  id: number;
+  name: string;
+  link: string;
+  imgUrl: string;
 }
 
 export const techStack: TechItem[] = [
@@ -182,6 +189,49 @@ export const techStack: TechItem[] = [
 export const projects: Project[] = [
   {
     id: 1,
+    name: "Web Scrapper",
+    description: "A web scrapper that uses Google shopping and Amazon store.",
+    techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS"],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/webScrapper",
+    liveUrl: "",
+    status: "done",
+  },
+  {
+    id: 2,
+    name: "Trello Clone",
+    description:
+      "A clone of trello, where I use react DND by atlassan to create the drag and drop functionality.",
+    techStack: [
+      "React.JS",
+      "Next.JS",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Firebase",
+    ],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/trello",
+    liveUrl: "",
+    status: "done",
+  },
+  {
+    id: 3,
+    name: "Capstone Project",
+    description:
+      "I built an full-stack app for a mid size business client, that manages their item rent movements, daily reminders for owner and customers and SMS messaging funtionality.",
+    techStack: [
+      "React.JS",
+      "Next.JS",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Firebase",
+    ],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/larosa_capstone_old",
+    liveUrl: "",
+    status: "done",
+  },
+  {
+    id: 4,
     name: "Wikibook",
     description:
       "A collaborative cheat sheet app where users can create and define their own terms.",
@@ -198,7 +248,7 @@ export const projects: Project[] = [
     status: "done",
   },
   {
-    id: 2,
+    id: 5,
     name: "TaskFolder",
     description:
       "A task management app with a Kanban-style board and progress tracking.",
@@ -208,12 +258,40 @@ export const projects: Project[] = [
     status: "done",
   },
   {
-    id: 3,
+    id: 6,
     name: "Portfolio Website V1",
-    description: "Personal portfolio to showcase my skills and projects.",
+    description:
+      "My first Personal portfolio to showcase my skills and projects.",
     techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS", "Zustand"],
     sourceCodeUrl: "https://github.com/yourusername/portfolio",
     liveUrl: "https://yourportfolio.com",
     status: "done",
+  },
+];
+
+export const certificates: CertificateItem[] = [
+  {
+    id: 1,
+    name: "College Deploma",
+    link: "",
+    imgUrl: "/certificate/",
+  },
+  {
+    id: 2,
+    name: "OJT Completion Certificate",
+    link: "",
+    imgUrl: "/certificate/",
+  },
+  {
+    id: 3,
+    name: "Git Version Control",
+    link: "",
+    imgUrl: "/certificate/",
+  },
+  {
+    id: 4,
+    name: "MERN stack development",
+    link: "",
+    imgUrl: "/certificate/",
   },
 ];

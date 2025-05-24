@@ -7,6 +7,7 @@ function IdoDesign() {
     const textRef = useRef<HTMLParagraphElement | null>(null);
     const textRef1 = useRef<HTMLParagraphElement | null>(null);
     const textRef2 = useRef<HTMLParagraphElement | null>(null);
+    const containerRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
         document.fonts.ready.then(() => {
             const ctx = gsap.context(() => {
@@ -64,13 +65,13 @@ function IdoDesign() {
                         ease: "power2.out",
                     }
                 );
-            }, textRef);
+            }, containerRef);
             return () => ctx.revert();
         });
     }, []);
 
     return (
-        <div className='mt-[30%] flex flex-col justify-end items-center w-fit ml-auto relative p-[1rem] bg-center bg-cover'>
+        <div ref={containerRef} className='mt-[30%] flex flex-col justify-end items-center w-fit ml-auto relative p-[1rem] bg-center bg-cover'>
             <div className='absolute left-[8.5rem] top-7'>
                 <p ref={textRef1} className='text-[1.5rem] font-bold'>I do</p>
             </div>

@@ -11,7 +11,7 @@ function NotFound() {
                 repeat: -1,
                 yoyo: true
             });
-        });
+        }, imgRef);
 
         return () => ctx.revert();
     }, []);

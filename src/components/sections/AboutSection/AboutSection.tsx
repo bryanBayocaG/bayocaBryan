@@ -14,6 +14,7 @@ function AboutSection() {
     const border1 = useRef<HTMLDivElement>(null);
     const border2 = useRef<HTMLDivElement>(null);
     const border3 = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null)
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.fromTo(
@@ -64,13 +65,13 @@ function AboutSection() {
                     },
                 }
             );
-        });
+        }, containerRef);
         return () => ctx.revert();
     }, [])
     return (
         <section className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
             <SectionHeader sectionName="My Path in Tech" />
-            <div className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
+            <div ref={containerRef} className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
                 <div ref={border1} className="flex flex-col p-[.5rem] gap-[.5rem] border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
                     <div className="flex justify-center items-center ">
                         <LuBicepsFlexed className="w-[3.5rem] h-[3.5rem]" />

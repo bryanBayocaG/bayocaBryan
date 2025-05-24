@@ -43,7 +43,7 @@ function SectionHeader({ sectionName }: Props) {
                     },
                 }
             );
-        });
+        }, headerRef);
         return () => ctx.revert();
     }, []);
     return (

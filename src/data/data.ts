@@ -117,6 +117,13 @@ export const techStack: TechItem[] = [
     img: "tech_stack/redux.svg",
   },
   {
+    id: 23,
+    name: "GSAP",
+    designation: "frontend",
+    category: "library",
+    img: "tech_stack/gsap.svg",
+  },
+  {
     id: 13,
     name: "Zustand",
     designation: "frontend",

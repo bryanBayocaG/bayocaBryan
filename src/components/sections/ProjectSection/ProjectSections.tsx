@@ -14,11 +14,12 @@ function ProjectSections() {
             <SectionHeader sectionName="Things I’ve Made" />
             <SearchBar />
             <div className="flex flex-col gap-[1rem] justify-center items-center">
-                {projects.map(({ name, description, liveUrl, sourceCodeUrl, status, techStack, type }, i) => (
+                {projects.map(({ name, description, image, liveUrl, sourceCodeUrl, status, techStack, type }, i) => (
                     <Cards
                         key={i}
                         name={name}
                         description={description}
+                        img={image}
                         liveUrl={liveUrl}
                         sourceCodeUrl={sourceCodeUrl}
                         status={status}

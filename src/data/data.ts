@@ -15,12 +15,13 @@ export interface TechItem {
 export interface Project {
   id: number;
   name: string;
+  image?: string;
   description?: string;
-  type: "graphic_art" | "web_app" | "logo_design";
+  type: "Graphic Art" | "Web App" | "Logo Design";
   techStack?: string[];
   sourceCodeUrl?: string;
   liveUrl?: string;
-  status: "done" | "in-progress";
+  status: "Done" | "In-progress";
 }
 
 export interface CertificateItem {
@@ -191,19 +192,22 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Web Scrapper",
-    description: "A web scrapper that uses Google shopping and Amazon store.",
-    type: "web_app",
+    image: "",
+    description:
+      "A web scraper that extracts product data from both Google Shopping and the Amazon store. It features seamless integration with Oxylabs scrapper API. Users can choose which platform to scrape and enjoy a robust search experience with a custom-built filtering system, and sorting by price or relevance. This project highlights my skills in API integration, dynamic user input handling, and advanced front-end functionality for an intuitive user experience.",
+    type: "Web App",
     techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS"],
     sourceCodeUrl: "https://github.com/bryanBayocaG/webScrapper",
     liveUrl: "",
-    status: "done",
+    status: "Done",
   },
   {
     id: 2,
     name: "Trello Clone",
+    image: "",
     description:
-      "A clone of trello, where I use react DND by atlassan to create the drag and drop functionality.",
-    type: "web_app",
+      "A Trello clone built with React and TypeScript, featuring intuitive drag-and-drop functionality powered by Atlassian’s React DnD library. I integrated the OpenAI API to provide smart task insights by analyzing the content of the To-Do, In Progress, and Done columns. Users can also upload images to enrich their task cards, enhancing the visual experience. This project helped me deepen my understanding of TypeScript, advanced state management, and working with AI APIs to deliver intelligent, interactive features.",
+    type: "Web App",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -214,14 +218,15 @@ export const projects: Project[] = [
     ],
     sourceCodeUrl: "https://github.com/bryanBayocaG/trello",
     liveUrl: "",
-    status: "done",
+    status: "Done",
   },
   {
     id: 3,
     name: "Capstone Project",
+    image: "",
     description:
-      "I built an full-stack app for a mid size business client, that manages their item rent movements, daily reminders for owner and customers and SMS messaging funtionality.",
-    type: "web_app",
+      "I developed a full-stack application for a mid-sized business client to manage their item rental operations. The system tracks rental movements, sends daily reminders to both the business owner and customers, and includes SMS messaging functionality for real-time updates. Built with Laravel, I gained hands-on experience with the MVC architecture, creating robust API endpoints, and implementing effective error handling. This project sharpened my back-end development skills and gave me practical experience delivering a real-world solution tailored to client needs.",
+    type: "Web App",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -232,14 +237,15 @@ export const projects: Project[] = [
     ],
     sourceCodeUrl: "https://github.com/bryanBayocaG/larosa_capstone_old",
     liveUrl: "",
-    status: "done",
+    status: "Done",
   },
   {
     id: 4,
     name: "Wikibook",
+    image: "/projects/wikibook.png",
     description:
-      "A collaborative cheat sheet app where users can create and define their own terms.",
-    type: "web_app",
+      "A personalized cheat sheet app that allows users to create, define, and organize their own custom terms for quick reference. I implemented Firebase Authentication to manage user accounts securely and used Firestore to store and sync user data in real time. This project taught me how to build scalable, user-centric features using serverless architecture. It’s a lightweight yet powerful tool designed to boost productivity and knowledge retention.",
+    type: "Web App",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -250,29 +256,31 @@ export const projects: Project[] = [
     ],
     sourceCodeUrl: "https://github.com/yourusername/wikibook",
     liveUrl: "https://wikibook.vercel.app",
-    status: "done",
+    status: "Done",
   },
   {
     id: 5,
     name: "TaskFolder",
+    image: "/projects/taskfolder.png",
     description:
-      "A task management app with a Kanban-style board and progress tracking.",
-    type: "web_app",
+      "An advanced task management app featuring a Kanban-style board and real-time progress tracking. Users can create multiple boards and manage tasks within each board, offering a flexible and organized workflow. This project is an upgraded version of my earlier Trello clone, built with the MERN stack and enhanced with Zustand for state management. I also developed a custom REST API using Node.js, gaining deeper experience in full-stack development, scalable architecture, and state synchronization.",
+    type: "Web App",
     techStack: ["React.JS", "Zustand", "Tailwind CSS", "Firebase"],
     sourceCodeUrl: "https://github.com/yourusername/taskfolder",
     liveUrl: "https://taskfolder.vercel.app",
-    status: "done",
+    status: "Done",
   },
   {
     id: 6,
     name: "Portfolio Website V1",
+    image: "/projects/portfolioV1.png",
     description:
-      "My first Personal portfolio to showcase my skills and projects.",
-    type: "web_app",
+      "My first personal portfolio, built to showcase my skills, projects, and growth as a developer. Created using React and styled with Tailwind CSS, it’s fully responsive across all devices. This project marked my introduction to building polished UIs and mobile-friendly layouts, helping me understand the fundamentals of responsive design. It’s the first version of my portfolio and a milestone in my journey as a front-end developer.",
+    type: "Web App",
     techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS", "Zustand"],
     sourceCodeUrl: "https://github.com/yourusername/portfolio",
-    liveUrl: "https://yourportfolio.com",
-    status: "done",
+    liveUrl: "https://bayoca-portfolio.vercel.app/",
+    status: "Done",
   },
 ];
 

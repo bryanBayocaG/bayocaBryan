@@ -84,7 +84,7 @@ function SearchBar({ setTechStack }: SearchBarProps) {
     };
 
     return (
-        <div className="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row gap-[1rem] shadow-lg p-[1rem] w-[35rem] md:w-[45rem] lg:w-[65rem] rounded-[.5rem]">
+        <div className="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row gap-[1rem] shadow-lg p-[1rem] w-[35rem] md:w-[45rem]  lg:w-[65rem] rounded-[.5rem]">
             <div className="flex w-full bg-white text-black  items-center px-2">
                 <FaSearch />
                 <input

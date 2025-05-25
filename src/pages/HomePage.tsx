@@ -2,7 +2,7 @@ import HeroSection from '../components/sections/HeroSection/HeroSection'
 import TechStackection from '../components/sections/TechStackSection/TechStackSection'
 import ProjectSections from '../components/sections/ProjectSection/ProjectSections'
 import Footer from '../components/Footer'
-import AboutSection from '../components/sections/AboutSection/AboutSection'
+import MyPathSection from '../components/sections/MyPathSectionSection/MyPathSection'
 
 function HomePage() {
     return (
@@ -10,7 +10,7 @@ function HomePage() {
             <main className="">
                 <HeroSection />
                 <TechStackection />
-                <AboutSection />
+                <MyPathSection />
                 <ProjectSections />
             </main>
             <Footer />

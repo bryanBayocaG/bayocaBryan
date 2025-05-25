@@ -16,7 +16,8 @@ export interface Project {
   id: number;
   name: string;
   description?: string;
-  techStack: string[];
+  type: "graphic_art" | "web_app" | "logo_design";
+  techStack?: string[];
   sourceCodeUrl?: string;
   liveUrl?: string;
   status: "done" | "in-progress";
@@ -191,6 +192,7 @@ export const projects: Project[] = [
     id: 1,
     name: "Web Scrapper",
     description: "A web scrapper that uses Google shopping and Amazon store.",
+    type: "web_app",
     techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS"],
     sourceCodeUrl: "https://github.com/bryanBayocaG/webScrapper",
     liveUrl: "",
@@ -201,6 +203,7 @@ export const projects: Project[] = [
     name: "Trello Clone",
     description:
       "A clone of trello, where I use react DND by atlassan to create the drag and drop functionality.",
+    type: "web_app",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -218,6 +221,7 @@ export const projects: Project[] = [
     name: "Capstone Project",
     description:
       "I built an full-stack app for a mid size business client, that manages their item rent movements, daily reminders for owner and customers and SMS messaging funtionality.",
+    type: "web_app",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -235,6 +239,7 @@ export const projects: Project[] = [
     name: "Wikibook",
     description:
       "A collaborative cheat sheet app where users can create and define their own terms.",
+    type: "web_app",
     techStack: [
       "React.JS",
       "Next.JS",
@@ -252,6 +257,7 @@ export const projects: Project[] = [
     name: "TaskFolder",
     description:
       "A task management app with a Kanban-style board and progress tracking.",
+    type: "web_app",
     techStack: ["React.JS", "Zustand", "Tailwind CSS", "Firebase"],
     sourceCodeUrl: "https://github.com/yourusername/taskfolder",
     liveUrl: "https://taskfolder.vercel.app",
@@ -262,6 +268,7 @@ export const projects: Project[] = [
     name: "Portfolio Website V1",
     description:
       "My first Personal portfolio to showcase my skills and projects.",
+    type: "web_app",
     techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS", "Zustand"],
     sourceCodeUrl: "https://github.com/yourusername/portfolio",
     liveUrl: "https://yourportfolio.com",
@@ -276,24 +283,25 @@ export const certificates: CertificateItem[] = [
     link: "https://www.linkedin.com/learning/certificates/ea04657ac3955812c07876f6f28e31948c67f72ab35e61461111fd2fe716874b",
     imgUrl: "/certificate/javascript_async.jpg",
   },
-  // {
-  //   id: 1,
-  //   name: "College Deploma",
-  //   link: "",
-  //   imgUrl: "/certificate/",
-  // },
-  {
-    id: 2,
-    name: "OJT Completion Certificate",
-    link: "https://drive.google.com/file/d/17hwEtZR4RfdgoQjGaoo88d0ZsTVvdKNw/view?usp=sharing",
-    imgUrl: "/certificate/ojt_cert.jpg",
-  },
   {
     id: 3,
     name: "Git Version Control",
     link: "https://www.linkedin.com/learning/certificates/b970680c8cf6ffee36e3ba22fa0b75f329b58457b8149c404952a7ac2a81347c?trk=share_certificate",
     imgUrl: "/certificate/version_control.jpg",
   },
+  {
+    id: 1,
+    name: "College Diploma",
+    link: "https://drive.google.com/file/d/14oy_ntnMssk8n4j5z7F1QIfXKbhZPODD/view?usp=sharing",
+    imgUrl: "/certificate/bayoca_diploma.jpg",
+  },
+  {
+    id: 2,
+    name: "OJT Completion Certificate",
+    link: "https://drive.google.com/file/d/17hwEtZR4RfdgoQjGaoo88d0ZsTVvdKNw/view?usp=sharing",
+    imgUrl: "/certificate/ojt_cert.jpg",
+  },
+
   {
     id: 4,
     name: "MERN stack development",

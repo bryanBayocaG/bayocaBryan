@@ -14,7 +14,7 @@ import { EffectCreative, Autoplay, Pagination } from 'swiper/modules';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AboutSection() {
+function MyPathSection() {
 
     const border1 = useRef<HTMLDivElement>(null);
     const border2 = useRef<HTMLDivElement>(null);
@@ -74,7 +74,9 @@ function AboutSection() {
         return () => ctx.revert();
     }, [])
     return (
-        <section className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
+        <section
+            id="my_path"
+            className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
             <SectionHeader sectionName="My Path in Tech" />
             <div ref={containerRef} className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
                 <div ref={border1} className="relative grid grid-cols-5 md:grid-cols-7   p-[.5rem] gap-[.5rem] border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
@@ -109,16 +111,13 @@ function AboutSection() {
                             className="mySwiper w-full h-full"
                         >
                             {certificates.map((cert, i) => (
-                                <SwiperSlide key={i} className="w-full h-full">
-                                    <a href={cert.link} target="_blank">
+                                <SwiperSlide key={i} className="w-full h-full ">
+                                    <a href={cert.link} target="_blank" className="h-full w-full flex justify-center items-center bg-white/30">
                                         <img src={cert.imgUrl} className="object-contain" alt={cert.name} />
                                     </a>
                                 </SwiperSlide>
                             ))
-
                             }
-
-
                         </Swiper>
                     </div>
                 </div>
@@ -158,4 +157,4 @@ function AboutSection() {
     )
 }
 
-export default AboutSection
+export default MyPathSection

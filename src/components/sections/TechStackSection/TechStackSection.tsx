@@ -11,7 +11,7 @@ function TechStackSection() {
     const [techStackItem, setTechStackItem] = useState<TechItem[]>(techStack)
     return (
         <section
-            id="techstack"
+            id="tech_stack"
             className='about-path flex flex-col justify-center items-center gap-[1rem] bg-primary dark:bg-primary-dark -mt-[20vh] py-[15rem] lg:py-[8rem] text-white min-h-[50rem]'>
             <SectionHeader sectionName="What I Work With" />
             <SearchBar setTechStack={setTechStackItem} />

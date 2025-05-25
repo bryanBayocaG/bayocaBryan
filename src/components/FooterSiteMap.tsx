@@ -9,9 +9,9 @@ function FooterSiteMap() {
                     Sections to <span className="text-primary font-bold">Navigate</span>
                 </h5>
                 <a href="#home" className="hover:text-primary text-[1.5rem]">Home</a>
-                <a href="#about" className="hover:text-primary text-[1.5rem]">About Me</a>
-                <a href="#experience" className="hover:text-primary text-[1.5rem]">My Experience</a>
-                <a href="#projects" className="hover:text-primary text-[1.5rem]">My Project</a>
+                <a href="#tech_stack" className="hover:text-primary text-[1.5rem]">My Tech-stack</a>
+                <a href="#my_path" className="hover:text-primary text-[1.5rem]">My Path</a>
+                <a href="#my_projects" className="hover:text-primary text-[1.5rem]">My Project</a>
             </div>
         </div>
     )

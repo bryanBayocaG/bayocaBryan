@@ -58,6 +58,7 @@ function Header() {
                     href="https://github.com/bryanBayocaG"
                     rel="noopener noreferrer"
                     target="_blank"
+                    title="My Github Profile"
                     className="relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 hover:text-primary"
                 >
                     <FaGithub className="w-[2rem] h-[2rem]" />
@@ -69,6 +70,7 @@ function Header() {
                     href="https://www.linkedin.com/in/bryan-bayoca"
                     rel="noopener noreferrer"
                     target="_blank"
+                    title="My Linkedin Profile"
                     className="relative dark:text-neutral-50 items-center flex space-x-[.5rem] text-neutral-600 hover:text-primary"
                 >
                     <FaLinkedin className="w-[2rem] h-[2rem]" />

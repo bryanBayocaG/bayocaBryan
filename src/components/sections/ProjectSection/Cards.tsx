@@ -1,4 +1,4 @@
-import { FaGithub, FaLink } from "react-icons/fa"
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 import { resolveTechItems } from "../../../utils/techItemAssigner";
 import TechStackIcon from "../../TechStackIcon";
 
@@ -36,8 +36,8 @@ function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl
                 <div className="flex justify-between">
                     <h3>{name}</h3>
                     <div className="flex gap-[1rem]">
-                        <a href={liveUrl}><FaLink className="w-[2rem] h-[2rem]" /></a>
-                        <a href={sourceCodeUrl}><FaGithub className="w-[2rem] h-[2rem]" /></a>
+                        {liveUrl && <a href={liveUrl} title="Live URL" target="_blank"><FaExternalLinkAlt className="w-[2rem] h-[2rem]" /></a>}
+                        {sourceCodeUrl && <a href={sourceCodeUrl} title="Source Code" target="_blank"><FaGithub className="w-[2rem] h-[2rem]" /></a>}
                     </div>
                 </div>
                 <div className="flex flex-row gap-[1rem]">

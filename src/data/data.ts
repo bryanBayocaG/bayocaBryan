@@ -197,13 +197,57 @@ export const techStack: TechItem[] = [
 
 export const projects: Project[] = [
   {
+    id: 7,
+    name: "NestNexus",
+    image: "/projects/nestNexus.png",
+    description:
+      "A real estate management platform where landlords can upload and manage property listings with detailed descriptions and images. It features secure file handling using Appwrite storage buckets and stores listing data in MongoDB for scalability and performance. Customers can easily search, filter, and contact landlords based on their specific needs. This project enhanced my skills in building full-stack applications with dynamic data handling and user-centric design. It’s a complete solution for streamlined property discovery and management.",
+    type: "Web App",
+    techStack: [
+      "React.JS",
+      "Zustand",
+      "Tailwind CSS",
+      "Firebase",
+      "Express.JS",
+      "MongoDB",
+    ],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/nestNexus",
+    liveUrl: "https://nest-nexus.vercel.app/",
+    status: "Done",
+  },
+  {
+    id: 8,
+    name: "Natours",
+    image: "/projects/natours.png",
+    description:
+      "A purely front-end project built to practice and strengthen my understanding of Angular fundamentals. I focused on creating reusable components, implementing responsive layouts, and managing styles using SCSS with variables and mixins. This project helped me build a solid foundation in Angular’s component-based architecture and responsive design principles. It served as a hands-on exploration of modern front-end development techniques using Angular and SCSS.",
+    type: "Web App",
+    techStack: ["Angular", "SCSS", "CSS"],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/natours",
+    liveUrl: "https://natours-cyan-nine.vercel.app/",
+    status: "In-progress",
+  },
+  {
+    id: 9,
+    name: "Authentication API",
+    image: "",
+    description:
+      "A pure back-end project where I practiced building RESTful APIs using Laravel’s resource controllers. The application runs in a Dockerized environment with MySQL as the database and uses JWT for authentication, securely stored in HTTP cookies. I implemented full CRUD functionality, established relationships within Laravel Eloquent models, and included structured error handling for robust API behavior. This project deepened my knowledge of Laravel’s API capabilities, containerization, and secure user authentication.",
+    type: "Web App",
+    techStack: ["Laravel", "PHP", "MySQL", "Docker"],
+    sourceCodeUrl:
+      "https://github.com/bryanBayocaG/project-admin/tree/main/laravel-admin",
+    liveUrl: "",
+    status: "In-progress",
+  },
+  {
     id: 5,
     name: "TaskFolder",
     image: "/projects/taskfolder.png",
     description:
       "An advanced task management app featuring a Kanban-style board and real-time progress tracking. Users can create multiple boards and manage tasks within each board, offering a flexible and organized workflow. This project is an upgraded version of my earlier Trello clone, built with the MERN stack and enhanced with Zustand for state management. I also developed a custom REST API using Node.js, gaining deeper experience in full-stack development, scalable architecture, and state synchronization.",
     type: "Web App",
-    techStack: ["React.JS", "Zustand", "Tailwind CSS", "Firebase"],
+    techStack: ["React.JS", "Zustand", "Tailwind CSS", "MongoDB", "Firebase"],
     sourceCodeUrl: "https://github.com/yourusername/taskfolder",
     liveUrl: "https://taskfolder.vercel.app",
     status: "Done",
@@ -235,7 +279,7 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Trello Clone",
-    image: "",
+    image: "/projects/trello.png",
     description:
       "A Trello clone built with React and TypeScript, featuring intuitive drag-and-drop functionality powered by Atlassian’s React DnD library. I integrated the OpenAI API to provide smart task insights by analyzing the content of the To-Do, In Progress, and Done columns. Users can also upload images to enrich their task cards, enhancing the visual experience. This project helped me deepen my understanding of TypeScript, advanced state management, and working with AI APIs to deliver intelligent, interactive features.",
     type: "Web App",
@@ -248,12 +292,12 @@ export const projects: Project[] = [
       "Firebase",
     ],
     sourceCodeUrl: "https://github.com/bryanBayocaG/trello",
-    liveUrl: "",
+    liveUrl: "https://trello-clone-two-hazel.vercel.app/",
     status: "Done",
   },
   {
     id: 3,
-    name: "Capstone Project",
+    name: "Capstone Project - (New one in progress)",
     image: "",
     description:
       "I developed a full-stack application for a mid-sized business client to manage their item rental operations. The system tracks rental movements, sends daily reminders to both the business owner and customers, and includes SMS messaging functionality for real-time updates. Built with Laravel, I gained hands-on experience with the MVC architecture, creating robust API endpoints, and implementing effective error handling. This project sharpened my back-end development skills and gave me practical experience delivering a real-world solution tailored to client needs.",

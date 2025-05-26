@@ -5,9 +5,9 @@ function ThemeSwitch() {
     return (
         <div className='w-[2rem] h-[2rem] '>
             {theme === 'light' ?
-                (<button className='hover:cursor-pointer w-full h-full hover:text-primary' onClick={() => setTheme('dark')}><CiDark className='w-full h-full' /></button>)
+                (<button title='Switch Theme' className='hover:cursor-pointer w-full h-full hover:text-primary' onClick={() => setTheme('dark')}><CiDark className='w-full h-full' /></button>)
                 :
-                (<button className='hover:cursor-pointer w-full h-full hover:text-primary' onClick={() => setTheme('light')}><CiLight className='w-full h-full' /></button>)}
+                (<button title='Switch Theme' className='hover:cursor-pointer w-full h-full hover:text-primary' onClick={() => setTheme('light')}><CiLight className='w-full h-full' /></button>)}
         </div>
     )
 }

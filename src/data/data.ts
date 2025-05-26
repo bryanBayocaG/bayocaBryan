@@ -197,6 +197,30 @@ export const techStack: TechItem[] = [
 
 export const projects: Project[] = [
   {
+    id: 5,
+    name: "TaskFolder",
+    image: "/projects/taskfolder.png",
+    description:
+      "An advanced task management app featuring a Kanban-style board and real-time progress tracking. Users can create multiple boards and manage tasks within each board, offering a flexible and organized workflow. This project is an upgraded version of my earlier Trello clone, built with the MERN stack and enhanced with Zustand for state management. I also developed a custom REST API using Node.js, gaining deeper experience in full-stack development, scalable architecture, and state synchronization.",
+    type: "Web App",
+    techStack: ["React.JS", "Zustand", "Tailwind CSS", "Firebase"],
+    sourceCodeUrl: "https://github.com/yourusername/taskfolder",
+    liveUrl: "https://taskfolder.vercel.app",
+    status: "Done",
+  },
+  {
+    id: 6,
+    name: "Portfolio Website V1",
+    image: "/projects/portfolioV1.png",
+    description:
+      "My first personal portfolio, built to showcase my skills, projects, and growth as a developer. Created using React and styled with Tailwind CSS, it’s fully responsive across all devices. This project marked my introduction to building polished UIs and mobile-friendly layouts, helping me understand the fundamentals of responsive design. It’s the first version of my portfolio and a milestone in my journey as a front-end developer.",
+    type: "Web App",
+    techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS", "Zustand"],
+    sourceCodeUrl: "https://github.com/yourusername/portfolio",
+    liveUrl: "https://bayoca-portfolio.vercel.app/",
+    status: "Done",
+  },
+  {
     id: 1,
     name: "Web Scrapper",
     image: "",
@@ -234,14 +258,7 @@ export const projects: Project[] = [
     description:
       "I developed a full-stack application for a mid-sized business client to manage their item rental operations. The system tracks rental movements, sends daily reminders to both the business owner and customers, and includes SMS messaging functionality for real-time updates. Built with Laravel, I gained hands-on experience with the MVC architecture, creating robust API endpoints, and implementing effective error handling. This project sharpened my back-end development skills and gave me practical experience delivering a real-world solution tailored to client needs.",
     type: "Web App",
-    techStack: [
-      "React.JS",
-      "Next.JS",
-      "TypeScript",
-      "Zustand",
-      "Tailwind CSS",
-      "Firebase",
-    ],
+    techStack: ["Laravel", "PHP", "CSS", "JavaScript", "Bootstrap", "MySQL"],
     sourceCodeUrl: "https://github.com/bryanBayocaG/larosa_capstone_old",
     liveUrl: "",
     status: "Done",
@@ -263,30 +280,6 @@ export const projects: Project[] = [
     ],
     sourceCodeUrl: "https://github.com/yourusername/wikibook",
     liveUrl: "https://wikibook.vercel.app",
-    status: "Done",
-  },
-  {
-    id: 5,
-    name: "TaskFolder",
-    image: "/projects/taskfolder.png",
-    description:
-      "An advanced task management app featuring a Kanban-style board and real-time progress tracking. Users can create multiple boards and manage tasks within each board, offering a flexible and organized workflow. This project is an upgraded version of my earlier Trello clone, built with the MERN stack and enhanced with Zustand for state management. I also developed a custom REST API using Node.js, gaining deeper experience in full-stack development, scalable architecture, and state synchronization.",
-    type: "Web App",
-    techStack: ["React.JS", "Zustand", "Tailwind CSS", "Firebase"],
-    sourceCodeUrl: "https://github.com/yourusername/taskfolder",
-    liveUrl: "https://taskfolder.vercel.app",
-    status: "Done",
-  },
-  {
-    id: 6,
-    name: "Portfolio Website V1",
-    image: "/projects/portfolioV1.png",
-    description:
-      "My first personal portfolio, built to showcase my skills, projects, and growth as a developer. Created using React and styled with Tailwind CSS, it’s fully responsive across all devices. This project marked my introduction to building polished UIs and mobile-friendly layouts, helping me understand the fundamentals of responsive design. It’s the first version of my portfolio and a milestone in my journey as a front-end developer.",
-    type: "Web App",
-    techStack: ["React.JS", "Next.JS", "TypeScript", "Tailwind CSS", "Zustand"],
-    sourceCodeUrl: "https://github.com/yourusername/portfolio",
-    liveUrl: "https://bayoca-portfolio.vercel.app/",
     status: "Done",
   },
 ];

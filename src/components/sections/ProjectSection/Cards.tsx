@@ -1,4 +1,6 @@
 import { FaGithub, FaLink } from "react-icons/fa"
+import { resolveTechItems } from "../../../utils/techItemAssigner";
+import TechStackIcon from "../../TechStackIcon";
 
 interface Props {
     name: string;
@@ -40,8 +42,12 @@ function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl
                 </div>
                 <div className="flex flex-row gap-[1rem]">
                     {techStack ?
-                        techStack?.map((tech, i) => (
-                            <p key={i}>{tech}</p>
+                        // techStack?.map((tech, i) => (
+                        //     <p key={i}>{tech}</p>
+                        // ))
+                        resolveTechItems(techStack || []).map((tech) => (
+                            // <img className="h-5 w-5" key={tech.id} src={tech.img} alt={tech.name} title={tech.name} />
+                            <TechStackIcon useFor="smallIcon" image={tech.img} name={tech.name} />
                         ))
                         :
                         ''

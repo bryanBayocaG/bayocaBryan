@@ -15,19 +15,19 @@ function SearchBar({ setTechStack }: SearchBarProps) {
         useFor: 'all',
         category: 'all'
     });
-    useEffect(() => {
-        const urlParams = new URLSearchParams(location.search)
-        const searchTermFromUrl = urlParams.get('searchTerm')
-        const useForFromUrl = urlParams.get('useFor')
-        const categoryFromUrl = urlParams.get('category')
-        if (searchTermFromUrl || useForFromUrl || categoryFromUrl) {
-            setSearchData({
-                searchTerm: searchTermFromUrl || '',
-                useFor: useForFromUrl || 'all',
-                category: categoryFromUrl || 'all'
-            })
-        }
-    }, [location.search]);
+    // useEffect(() => {
+    //     const urlParams = new URLSearchParams(location.search)
+    //     const searchTermFromUrl = urlParams.get('searchTerm')
+    //     const useForFromUrl = urlParams.get('useFor')
+    //     const categoryFromUrl = urlParams.get('category')
+    //     if (searchTermFromUrl || useForFromUrl || categoryFromUrl) {
+    //         setSearchData({
+    //             searchTerm: searchTermFromUrl || '',
+    //             useFor: useForFromUrl || 'all',
+    //             category: categoryFromUrl || 'all'
+    //         })
+    //     }
+    // }, [location.search]);
 
     const filteredTech = useMemo(() => {
         return techStack.filter(tech => {

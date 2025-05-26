@@ -1,87 +1,182 @@
-import { projects } from '../../../data/data'
-import { FaSearch } from 'react-icons/fa'
+import { projects, techStack, type Project } from '../../../data/data'
+import { FaMinus, FaPlus, FaSearch } from 'react-icons/fa'
+import Counter from './Counter';
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react'
+import type { Dispatch, SetStateAction } from 'react';
 
-function SearchBar() {
+interface SearchBarProps {
+    setProjectItem: Dispatch<SetStateAction<Project[]>>;
+    setListPerPage: Dispatch<SetStateAction<number>>;
+}
+
+interface SearchData {
+    searchProjectTerm: string;
+    type: string;
+    status: string;
+    numberPerPage: number;
+    tags: string[]; // 👈 clearly define tags as a string array
+}
+
+
+function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
+    const navigate = useNavigate();
     const webAppCount = projects.filter(project => project.type === "Web App").length;
     const logoDesignCount = projects.filter(project => project.type === "Logo Design").length;
     const graphicDesignCount = projects.filter(project => project.type === "Graphic Art").length;
-    const handleChange = () => {
-        console.log('helo')
+    const [searchData, setSearchData] = useState<SearchData>({
+        searchProjectTerm: '',
+        type: 'all',
+        status: 'all',
+        numberPerPage: 3,
+        tags: [],
+    });
+    console.log(searchData);
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { id, value } = e.target;
+        const updatedSearchData = {
+            ...searchData,
+            [id === 'searchProjectTerm' ? 'searchProjectTerm' : id]: value
+        };
+        setSearchData(updatedSearchData);
+
+        const urlParams = new URLSearchParams();
+
+        if (updatedSearchData.searchProjectTerm) {
+            urlParams.set('searchProjectTerm', updatedSearchData.searchProjectTerm);
+        }
+        if (updatedSearchData.type && updatedSearchData.type !== 'all') {
+            urlParams.set('useFor', updatedSearchData.type);
+        }
+        if (updatedSearchData.status && updatedSearchData.status !== 'all') {
+            urlParams.set('category', updatedSearchData.status);
+        }
+        if (updatedSearchData.numberPerPage) {
+            setListPerPage(updatedSearchData.numberPerPage);
+        }
+        const query = urlParams.toString();
+        navigate(`?${query}`, { replace: true });
     }
+    const handleTags = (tag: string) => {
+        const isAlreadySelected = searchData.tags.includes(tag);
+        const updatedTags = isAlreadySelected
+            ? searchData.tags.filter(tag => tag !== tag)
+            : [...searchData.tags, tag];
+
+        setSearchData(prev => ({
+            ...prev,
+            tags: updatedTags,
+        }));
+        const urlParams = new URLSearchParams();
+        urlParams.set('tags', searchData.tags.join(','))
+        const query = urlParams.toString();
+        navigate(`?${query}`, { replace: true });
+    }
+
+
+    const filteredProjects = useMemo(() => {
+        return projects.filter(proj => {
+            const matchesSearch = proj.name.toLowerCase().includes(searchData.searchProjectTerm.toLowerCase());
+            const matchesType =
+                searchData.type === 'all' || proj.type === searchData.type;
+
+            const matchesStatus =
+                searchData.status === 'all' || proj.status === searchData.status;
+
+            const matchesTags = searchData.tags.length === 0 || searchData.tags.some(tag => proj.techStack.includes(tag));
+
+            return matchesSearch && matchesType && matchesStatus && matchesTags;
+
+
+        });
+    }, [searchData.searchProjectTerm, searchData.type, searchData.status, searchData.tags]);
+
+    useEffect(() => {
+        setProjectItem(filteredProjects)
+    }, [filteredProjects])
     return (
-        <div className='sticky top-0 w-full gap-[1rem] bg-primary p-[1rem] dark:bg-primary-dark flex justify-between z-20 rounded-[.1rem] shadow-lg'>
-            <div className=" text-white flex flex-col gap-[1rem] w-[85vw] max-w-[55rem] rounded-[.5rem]">
-                <div className='bg-white/20 p-[1rem] shadow-lg'>
-                    <div className="flex w-full bg-white text-black  items-center px-2">
+        <div className='md:sticky top-0 flex flex-col gap-[1rem]  w-full bg-primary p-[1rem] dark:bg-primary-dark z-20 rounded-[.1rem] shadow-lg'>
+            <div className='flex justify-between gap-[1rem] '>
+                <div className="bg-white/20 p-[1rem] shadow-lg text-white flex flex-col md:flex-row gap-[1rem] w-[85vw] max-w-[55rem] rounded-[.5rem]">
+                    <div className="flex w-full my-auto h-[90%] bg-white text-black  items-center px-2">
                         <FaSearch />
                         <input
-                            id='searchbar'
+                            id='searchProjectTerm'
                             type="text"
-                            placeholder="Search tech..."
-                            // value={serachData.searchTerm}
+                            placeholder="Search Project..."
+                            value={searchData.searchProjectTerm}
                             onChange={handleChange}
                             className="bg-transparent p-2 focus:outline-none w-full"
                         />
                     </div>
+
+                    <div className="flex justify-start gap-[1rem]">
+                        <div className="flex flex-col items-start gap-[.5rem] ">
+                            <label>Type</label>
+                            <select
+                                id="type"
+                                value={searchData.type}
+                                onChange={handleChange}
+                                className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
+                            >
+                                <option className="text-neutral-600" value="all">All</option>
+                                <option className="text-neutral-600 " value="Web App">Web App</option>
+                                <option className="text-neutral-600 " value="Graphic Art">Graphic Art</option>
+                                <option className="text-neutral-600" value="Logo Design">Logo Design</option>
+                            </select>
+                        </div>
+                        <div className="flex flex-col items-start gap-[.5rem] ">
+                            <label>Status</label>
+                            <select
+                                id="status"
+                                value={searchData.status}
+                                onChange={handleChange}
+                                className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
+                            >
+                                <option className="text-neutral-600" value="all">All</option>
+                                <option className="text-neutral-600 " value="Done">Done</option>
+                                <option className="text-neutral-600 " value="In-progress">In-Progress</option>
+                            </select>
+                        </div>
+                        <div className="flex flex-col items-start gap-[.5rem]">
+                            <label>No. per page</label>
+                            <select
+                                id="numberPerPage"
+                                value={searchData.numberPerPage}
+                                onChange={handleChange}
+                                className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
+                            >
+                                <option className="text-neutral-600" value="3">03 per Page</option>
+                                <option className="text-neutral-600" value="4">04 per Page</option>
+                                <option className="text-neutral-600 " value="5">05 per Page</option>
+                                <option className="text-neutral-600 " value="6">06 per Page</option>
+                                <option className="text-neutral-600 " value="7">07 per Page</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex justify-start gap-[1rem]">
-                    <div className="flex flex-col md:items-start gap-[.5rem] items-center">
-                        <label>Type</label>
-                        <select
-                            id="category"
-                            // value={serachData.category}
-                            onChange={handleChange}
-                            className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
-                        >
-                            <option className="text-neutral-600" value="all">All</option>
-                            <option className="text-neutral-600 " value="framework">Web App</option>
-                            <option className="text-neutral-600 " value="language">Graphic Art</option>
-                            <option className="text-neutral-600" value="library">Logo Design</option>
-                        </select>
-                    </div>
-                    <div className="flex flex-col md:items-start gap-[.5rem] items-center">
-                        <label>Status</label>
-                        <select
-                            id="category"
-                            // value={serachData.category}
-                            onChange={handleChange}
-                            className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
-                        >
-                            <option className="text-neutral-600" value="all">All</option>
-                            <option className="text-neutral-600 " value="framework">Done</option>
-                            <option className="text-neutral-600 " value="language">In-Progress</option>
-                        </select>
-                    </div>
-                    <div className="flex    flex-col md:items-start gap-[.5rem] items-center">
-                        <label>No. per page</label>
-                        <select
-                            id="category"
-                            // value={serachData.category}
-                            onChange={handleChange}
-                            className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
-                        >
-                            <option className="text-neutral-600" value="3">03 per Page</option>
-                            <option className="text-neutral-600" value="4">04 per Page</option>
-                            <option className="text-neutral-600 " value="5">05 per Page</option>
-                            <option className="text-neutral-600 " value="6">06 per Page</option>
-                            <option className="text-neutral-600 " value="7">07 per Page</option>
-                        </select>
+                <div className='hidden md:block'>
+                    <div className='flex flex-row h-full  gap-[1rem]'>
+                        <Counter name="Logo" count={logoDesignCount} />
+                        <Counter name="Graphic Art" count={graphicDesignCount} />
+                        <Counter name="Web App" count={webAppCount} />
                     </div>
                 </div>
             </div>
-            <div className='flex flex-row gap-[1rem] h-full'>
-                <div className='w-[7rem] flex flex-col items-center justify-center bg-white/20 text-white p-[.5rem] rounded-[.5rem] shadow-lg'>
-                    <p className='text-[2rem] text-center font-bold'>{logoDesignCount < 10 ? `0${logoDesignCount}` : logoDesignCount}</p>
-                    <p className='whitespace-nowrap text-center'>Logo Design</p>
-                </div>
-                <div className='w-[7rem] flex flex-col items-center justify-center bg-white/20 text-white p-[.5rem] rounded-[.5rem] shadow-lg'>
-                    <p className='text-[2rem] text-center font-bold'>{graphicDesignCount < 10 ? `0${graphicDesignCount}` : graphicDesignCount}</p>
-                    <p className='whitespace-nowrap text-center'>Graphic Design</p>
-                </div>
-                <div className='w-[7rem] flex flex-col items-center justify-center bg-white/20 text-white p-[.5rem] rounded-[.5rem] shadow-lg'>
-                    <p className='text-[2rem] text-center font-bold'>{webAppCount < 10 ? `0${webAppCount}` : webAppCount}</p>
-                    <p className='whitespace-nowrap text-center'>Web App</p>
-                </div>
+            <div className='flex flex-row flex-wrap gap-[.5rem] w-full h-full text-white'>
+                <p>Tags:</p>
+                {techStack.map((techStack, i) => (
+                    <button
+                        key={i}
+                        onClick={() => { handleTags(techStack.name) }}
+                        className={`p-[.5rem] px-[1rem] rounded-[.5rem] shadow-lg flex items-center justify-center gap-[.5rem] cursor-pointer
+    ${searchData.tags.includes(techStack.name) ? 'bg-amber-300' : 'bg-white/20 hover:bg-white/30'}
+  `}
+                    >
+                        {searchData.tags.includes(techStack.name) ? <FaMinus /> : <FaPlus />}
+                        {techStack.name}
+                    </button>
+                ))}
             </div>
         </div>
     )

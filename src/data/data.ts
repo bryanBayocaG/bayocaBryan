@@ -18,7 +18,7 @@ export interface Project {
   image?: string;
   description?: string;
   type: "Graphic Art" | "Web App" | "Logo Design";
-  techStack?: string[];
+  techStack: string[];
   sourceCodeUrl?: string;
   liveUrl?: string;
   status: "Done" | "In-progress";

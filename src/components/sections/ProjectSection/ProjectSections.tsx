@@ -10,7 +10,7 @@ function ProjectSections() {
     return (
         <section
             id="my_projects"
-            className="flex flex-col w-full h-full justify-center gap-[1rem] p-[2rem]">
+            className="flex relative flex-col w-full h-full justify-center gap-[1rem] p-[2rem]">
             <SectionHeader sectionName="Things I’ve Made" />
             <SearchBar />
             <div className="flex flex-col gap-[1rem] justify-center items-center">

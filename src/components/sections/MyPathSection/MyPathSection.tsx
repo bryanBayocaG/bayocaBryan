@@ -79,7 +79,7 @@ function MyPathSection() {
             className="flex flex-col justify-center gap-[1rem] p-[2rem] ">
             <SectionHeader sectionName="My Path in Tech" />
             <div ref={containerRef} className="grid gap-[1rem] md:grid-rows-3 md:grid-col-2 lg:grid-cols-5">
-                <div ref={border1} className="relative grid grid-cols-5 md:grid-cols-7   p-[.5rem] gap-[.5rem] border-2 boder-neutral-200 md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
+                <div ref={border1} className="relative grid grid-cols-5 md:grid-cols-7 p-[.5rem] gap-[.5rem] border-2 border-neutral-200 shadow-md dark:border-white/[0.2] shadow-xl md:col-span-2 md:row-span-2 lg:row-span-3 lg:col-span-3 rounded-[.5rem]">
                     <div className="flex flex-col col-span-2 justify-start">
                         <div className="my-auto p-[.5rem]">
                             <p>I love to learn new and earn</p>
@@ -121,7 +121,7 @@ function MyPathSection() {
                         </Swiper>
                     </div>
                 </div>
-                <div ref={border2} className="grid grid-cols-5 md:grid-cols-7 border-2 boder-neutral-200 lg:col-span-2 lg:row-span-2 rounded-[1rem] overflow-hidden">
+                <div ref={border2} className="grid grid-cols-5 md:grid-cols-7 border-2 border-neutral-200 dark:border-white/[0.2] shadow-md lg:col-span-2 lg:row-span-2 rounded-[1rem] overflow-hidden">
                     <div className="flex flex-col col-span-2 justify-start">
                         <div className="my-auto p-[.5rem]">
                             <p>I constantly improve</p>
@@ -147,7 +147,7 @@ function MyPathSection() {
                         </div>
                     </div>
                 </div>
-                <div ref={border3} className="flex justify-center items-center border-2 boder-neutral-200 lg:col-span-2 rounded-[.5rem]">
+                <div ref={border3} className="flex justify-center items-center border-2 border-neutral-200 dark:border-white/[0.2] shadow-md lg:col-span-2 rounded-[.5rem]">
                     <div className="flex items-center justify-center p-[1rem]">
                         <h5>Curently Learning </h5>
                     </div>

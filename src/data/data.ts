@@ -159,6 +159,13 @@ export const techStack: TechItem[] = [
     img: "tech_stack/docker.svg",
   },
   {
+    id: 22,
+    name: "Express.JS",
+    designation: "backend",
+    category: "framework",
+    img: "tech_stack/express.svg",
+  },
+  {
     id: 18,
     name: "Git",
     designation: "tool",
@@ -186,8 +193,9 @@ export const techStack: TechItem[] = [
     category: "design",
     img: "tech_stack/photoshop.svg",
   },
+
   {
-    id: 22,
+    id: 23,
     name: "Illustrator",
     designation: "design",
     category: "design",
@@ -247,9 +255,16 @@ export const projects: Project[] = [
     description:
       "An advanced task management app featuring a Kanban-style board and real-time progress tracking. Users can create multiple boards and manage tasks within each board, offering a flexible and organized workflow. This project is an upgraded version of my earlier Trello clone, built with the MERN stack and enhanced with Zustand for state management. I also developed a custom REST API using Node.js, gaining deeper experience in full-stack development, scalable architecture, and state synchronization.",
     type: "Web App",
-    techStack: ["React.JS", "Zustand", "Tailwind CSS", "MongoDB", "Firebase"],
+    techStack: [
+      "React.JS",
+      "Zustand",
+      "Tailwind CSS",
+      "Express.JS",
+      "MongoDB",
+      "Firebase",
+    ],
     sourceCodeUrl: "https://github.com/yourusername/taskfolder",
-    liveUrl: "https://taskfolder.vercel.app",
+    liveUrl: "https://task-folder.vercel.app/",
     status: "Done",
   },
   {

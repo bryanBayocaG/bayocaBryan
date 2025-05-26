@@ -17,7 +17,7 @@ function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl
     const bg = 'bg-[url(' + img + ')]';
     console.log(bg);
     return (
-        <div className="flex flex-col md:flex-row border-2 w-full md:h-[300px] max-w-[1140px] border-neutral-200 shadow-xl rounded-[.5rem] overflow-hidden">
+        <div className="flex flex-col md:flex-row border-2 w-full md:h-[300px] max-w-[1140px] border-neutral-200 shadow-xl rounded-[.5rem] overflow-hidden dark:border-white/[0.2]">
             <div
                 style={{
                     backgroundImage: `url(${img || '/noImage.jpg'})`,

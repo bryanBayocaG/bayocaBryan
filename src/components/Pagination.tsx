@@ -24,7 +24,7 @@ function Pagination({ totalLists, listPerPage, currentPage, setCurrentPage }: Pr
                     onClick={() => {
                         setCurrentPage(page)
                     }}
-                    className={`p-2 rounded-lg  w-10 h-10 border-2 border-secondary ${currentPage === page ? "bg-secondary text-primary" : "text-secondary"
+                    className={`p-2 rounded-lg hover:cursor-pointer w-10 h-10 border-2 border-secondary ${currentPage === page ? "bg-secondary text-primary" : "text-secondary"
                         }`}
                 >
                     {page}

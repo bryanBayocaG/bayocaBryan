@@ -5,6 +5,7 @@ import { projects, type Project } from '../../../data/data'
 import Cards from "./Cards"
 import { useState } from "react"
 import Pagination from "../../Pagination"
+import NotFound from "../../NotFound"
 
 
 function ProjectSections() {
@@ -22,20 +23,23 @@ function ProjectSections() {
             <SectionHeader sectionName="Things I’ve Made" />
             <SearchBar setProjectItem={setProjectItem} setListPerPage={setListPerPage} />
             <div className="flex flex-col gap-[1rem] justify-center items-center">
-                {currentListing.map(({ name, description, image, liveUrl, sourceCodeUrl, status, techStack, type }, i) => (
-                    <Cards
-                        key={i}
-                        name={name}
-                        description={description}
-                        img={image}
-                        liveUrl={liveUrl}
-                        sourceCodeUrl={sourceCodeUrl}
-                        status={status}
-                        techStack={techStack}
-                        type={type}
-                    />
-                ))
-
+                {currentListing.length === 0 && (
+                    <NotFound />
+                )}
+                {
+                    currentListing.map(({ name, description, image, liveUrl, sourceCodeUrl, status, techStack, type }, i) => (
+                        <Cards
+                            key={i}
+                            name={name}
+                            description={description}
+                            img={image}
+                            liveUrl={liveUrl}
+                            sourceCodeUrl={sourceCodeUrl}
+                            status={status}
+                            techStack={techStack}
+                            type={type}
+                        />
+                    ))
                 }
             </div>
             <Pagination

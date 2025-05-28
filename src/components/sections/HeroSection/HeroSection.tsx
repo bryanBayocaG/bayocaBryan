@@ -1,34 +1,51 @@
 import gsap from 'gsap'
-
-
 import { useEffect, useRef } from 'react';
 import IdoCoding from './IdoCoding/IdoCoding';
 import IdoDesign from './IdoDesign/IdoDesign';
 
-
-
 function HeroSection() {
     const nonColorMeRef = useRef<HTMLDivElement | null>(null);
     const coloredMeRef = useRef<HTMLDivElement | null>(null);
-    const noColoredMeBG = useRef<HTMLDivElement | null>(null);
-
+    const noColoredMeBG = useRef<HTMLDivElement | null>(null)
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            const tl = gsap.timeline();
+        const images = Array.from(document.querySelectorAll('img'));
+        let loadedCount = 0;
 
-            tl.fromTo([nonColorMeRef.current, noColoredMeBG.current], { y: 300 }, {
-                y: 0,
-                duration: 2,
-                ease: "power2.out",
-            }, 0);
-            tl.fromTo(coloredMeRef.current, { y: -100 }, {
-                y: 0,
-                duration: 2,
-                ease: "power2.out",
-            }, 0);
-        }, nonColorMeRef);
+        const handleImageLoad = () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+                // All images are loaded
+                const ctx = gsap.context(() => {
+                    const tl = gsap.timeline();
+                    tl.fromTo([nonColorMeRef.current, noColoredMeBG.current], { y: 300 }, {
+                        y: 0,
+                        duration: 2,
+                        ease: "power2.out",
+                    }, 0);
+                    tl.fromTo(coloredMeRef.current, { y: -100 }, {
+                        y: 0,
+                        duration: 2,
+                        ease: "power2.out",
+                    }, 0);
+                }, nonColorMeRef);
 
-        return () => ctx.revert();
+                return () => ctx.revert();
+            }
+        };
+
+        images.forEach(img => {
+            if (img.complete) {
+                handleImageLoad();
+            } else {
+                img.addEventListener('load', handleImageLoad);
+            }
+        });
+
+        return () => {
+            images.forEach(img => {
+                img.removeEventListener('load', handleImageLoad);
+            });
+        };
     }, []);
     return (
         <section

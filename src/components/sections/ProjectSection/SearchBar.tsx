@@ -97,6 +97,7 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
                             value={searchData.searchProjectTerm}
                             onChange={handleChange}
                             className="bg-transparent p-2 focus:outline-none w-full"
+                            autoComplete='off'
                         />
                     </div>
 

@@ -15,7 +15,6 @@ interface SearchData {
     type: string;
     status: string;
     numberPerPage: number;
-    tags: string[]; // 👈 clearly define tags as a string array
 }
 
 
@@ -29,9 +28,8 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
         type: 'all',
         status: 'all',
         numberPerPage: 3,
-        tags: [],
     });
-    console.log(searchData);
+    const [currentTags, setCurrentTags] = useState<string[]>([]);
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { id, value } = e.target;
         const updatedSearchData = {
@@ -57,23 +55,15 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
         const query = urlParams.toString();
         navigate(`?${query}`, { replace: true });
     }
-    const handleTags = (tag: string) => {
-        const isAlreadySelected = searchData.tags.includes(tag);
-        const updatedTags = isAlreadySelected
-            ? searchData.tags.filter(tag => tag !== tag)
-            : [...searchData.tags, tag];
-
-        setSearchData(prev => ({
-            ...prev,
-            tags: updatedTags,
-        }));
-        const urlParams = new URLSearchParams();
-        urlParams.set('tags', searchData.tags.join(','))
-        const query = urlParams.toString();
-        navigate(`?${query}`, { replace: true });
+    const handleTags = (name: string) => {
+        const isAlreadySelected = currentTags.includes(name);
+        if (isAlreadySelected) {
+            const updateTags = currentTags.filter(tag => tag !== name)
+            setCurrentTags(updateTags)
+        } else {
+            setCurrentTags(prev => [...prev, name])
+        }
     }
-
-
     const filteredProjects = useMemo(() => {
         return projects.filter(proj => {
             const matchesSearch = proj.name.toLowerCase().includes(searchData.searchProjectTerm.toLowerCase());
@@ -83,13 +73,13 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
             const matchesStatus =
                 searchData.status === 'all' || proj.status === searchData.status;
 
-            const matchesTags = searchData.tags.length === 0 || searchData.tags.some(tag => proj.techStack.includes(tag));
+            const matchesTags = currentTags.length === 0 || currentTags.some(tag => proj.techStack.includes(tag));
 
             return matchesSearch && matchesType && matchesStatus && matchesTags;
 
 
         });
-    }, [searchData.searchProjectTerm, searchData.type, searchData.status, searchData.tags]);
+    }, [searchData.searchProjectTerm, searchData.type, searchData.status, currentTags]);
 
     useEffect(() => {
         setProjectItem(filteredProjects)
@@ -168,12 +158,12 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
                 {techStack.map((techStack, i) => (
                     <button
                         key={i}
-                        onClick={() => { handleTags(techStack.name) }}
+                        onClick={() => handleTags(techStack.name)}
                         className={`p-[.5rem] px-[1rem] rounded-[.5rem] shadow-lg flex items-center justify-center gap-[.5rem] cursor-pointer
-    ${searchData.tags.includes(techStack.name) ? 'bg-amber-300' : 'bg-white/20 hover:bg-white/30'}
+    ${currentTags.includes(techStack.name) ? 'bg-amber-300' : 'bg-white/20 hover:bg-white/30'}
   `}
                     >
-                        {searchData.tags.includes(techStack.name) ? <FaMinus /> : <FaPlus />}
+                        {currentTags.includes(techStack.name) ? <FaMinus /> : <FaPlus />}
                         {techStack.name}
                     </button>
                 ))}

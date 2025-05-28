@@ -1,6 +1,6 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
-import { resolveTechItems } from "../../../utils/techItemAssigner";
-import TechStackIcon from "../../TechStackIcon";
+// import { resolveTechItems } from "../../../utils/techItemAssigner";
+// import TechStackIcon from "../../TechStackIcon";
 interface Props {
     name: string;
     description?: string;
@@ -15,7 +15,7 @@ interface Props {
 function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl, status }: Props) {
 
     return (
-        <div className="flex flex-col md:flex-row border-2 w-full md:h-[300px] max-w-[1140px] border-neutral-200 shadow-xl rounded-[.5rem] overflow-hidden dark:border-white/[0.2]">
+        <div key={name} className="flex flex-col md:flex-row border-2 w-full md:h-[300px] max-w-[1140px] border-neutral-200 shadow-xl rounded-[.5rem] overflow-hidden dark:border-white/[0.2]">
             <div
                 style={{
                     backgroundImage: `url(${img || '/noImage.jpg'})`,
@@ -38,7 +38,7 @@ function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl
                         {sourceCodeUrl && <a href={sourceCodeUrl} title="Source Code" target="_blank"><FaGithub className="w-[2rem] h-[2rem]" /></a>}
                     </div>
                 </div>
-                <div className="flex flex-row gap-[1rem]">
+                {/* <div className="flex flex-row gap-[1rem]">
                     {techStack ?
                         resolveTechItems(techStack || []).map((tech) => (
                             <TechStackIcon useFor="smallIcon" image={tech.img} name={tech.name} />
@@ -46,8 +46,16 @@ function Cards({ name, description, img, type, techStack, sourceCodeUrl, liveUrl
                         :
                         ''
                     }
+                </div> */}
+                <div className="flex flex-wrap gap-[.5rem]">
+                    {techStack?.map((techName, i) => (
+                        <p key={i}
+                            className="bg-neutral-400 text-white dark:bg-white/20 p-[.3rem] px-[1rem] rounded-full"
+                        >
+                            {techName}
+                        </p>
+                    ))}
                 </div>
-
                 <div>
                     <p className="text-justify text-[1rem] line-clamp-6">{description}</p>
                 </div>

@@ -2,19 +2,21 @@ import gsap from 'gsap'
 import { useEffect, useRef } from 'react';
 import IdoCoding from './IdoCoding/IdoCoding';
 import IdoDesign from './IdoDesign/IdoDesign';
+import { useLoadStore } from '../../../store';
 
 function HeroSection() {
     const nonColorMeRef = useRef<HTMLDivElement | null>(null);
     const coloredMeRef = useRef<HTMLDivElement | null>(null);
-    const noColoredMeBG = useRef<HTMLDivElement | null>(null)
+    const noColoredMeBG = useRef<HTMLDivElement | null>(null);
+    const { setLoading, setNotLoading } = useLoadStore();
     useEffect(() => {
         const images = Array.from(document.querySelectorAll('img'));
         let loadedCount = 0;
-
+        setLoading();
         const handleImageLoad = () => {
             loadedCount++;
             if (loadedCount === images.length) {
-                // All images are loaded
+                setNotLoading()
                 const ctx = gsap.context(() => {
                     const tl = gsap.timeline();
                     tl.fromTo([nonColorMeRef.current, noColoredMeBG.current], { y: 300 }, {

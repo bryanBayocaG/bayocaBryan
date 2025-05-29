@@ -11,7 +11,6 @@ import { useTailwindBreakpoint } from "../../../hooks/monitorScreenSize";
 
 function TechStackSection() {
     const screen = useTailwindBreakpoint();
-    console.log(screen.width);
     const [techStackItem, setTechStackItem] = useState<TechItem[]>(techStack)
     const [currentPage, setCurrentPage] = useState(1);
     let listPerPage;
@@ -25,7 +24,6 @@ function TechStackSection() {
         default:
             listPerPage = 12;
     }
-    console.log('listing', listPerPage)
     const lastListingIndex = currentPage * listPerPage;
     const firstListingIndex = lastListingIndex - listPerPage;
     const currentListing = techStackItem.slice(firstListingIndex, lastListingIndex);

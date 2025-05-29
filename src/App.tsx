@@ -6,10 +6,11 @@ import NotFoundPage from "./pages/NotFoundPage"
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
+
   return (
     <>
       <BrowserRouter  >
-        <div className=" text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a] ">
+        <div className="text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a] ">
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />

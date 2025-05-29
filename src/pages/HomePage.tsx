@@ -3,17 +3,27 @@ import TechStackection from '../components/sections/TechStackSection/TechStackSe
 import ProjectSections from '../components/sections/ProjectSection/ProjectSections'
 import Footer from '../components/Footer'
 import MyPathSection from '../components/sections/MyPathSection/MyPathSection'
+import { useLoadStore } from '../store'
+import LoadingOverlay from './LoadingOverlay'
 
 function HomePage() {
+    const { isLoading } = useLoadStore();
     return (
         <>
             <main className="">
                 <HeroSection />
-                <TechStackection />
-                <MyPathSection />
-                <ProjectSections />
+                {isLoading ?
+                    <LoadingOverlay />
+                    :
+                    <>
+                        <TechStackection />
+                        <MyPathSection />
+                        <ProjectSections />
+                        <Footer />
+                    </>
+                }
             </main>
-            <Footer />
+
         </>
     )
 }

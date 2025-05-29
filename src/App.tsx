@@ -6,7 +6,6 @@ import NotFoundPage from "./pages/NotFoundPage"
 
 function App() {
   return (
-    /*<div className="h-screen relative text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a]"> */
     <>
       <BrowserRouter  >
         <div className=" text-neutral-600 dark:text-white bg-[#f7f7f7] dark:bg-[#0f172a] ">
@@ -18,7 +17,6 @@ function App() {
         </div>
       </BrowserRouter >
     </>
-    /*</div>*/
   )
 }
 

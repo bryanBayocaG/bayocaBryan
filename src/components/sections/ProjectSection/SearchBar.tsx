@@ -137,11 +137,11 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
                                 onChange={handleChange}
                                 className="bg-white/30 dark:bg-white text-white dark:text-neutral-600 rounded-md px-[.5rem] py-[.3rem] focus:outline-none"
                             >
-                                <option className="text-neutral-600" value="3">03 per Page</option>
-                                <option className="text-neutral-600" value="4">04 per Page</option>
-                                <option className="text-neutral-600 " value="5">05 per Page</option>
-                                <option className="text-neutral-600 " value="6">06 per Page</option>
-                                <option className="text-neutral-600 " value="7">07 per Page</option>
+                                {[...Array(10)].map((_, i) => (
+                                    <option className="text-neutral-600" value={i + 1} key={i + 1}>
+                                        {i + 1 < 10 ? `0${i + 1}` : i + 1} per Page
+                                    </option>
+                                ))}
                             </select>
                         </div>
                     </div>

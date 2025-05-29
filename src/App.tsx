@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
 import NotFoundPage from "./pages/NotFoundPage"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-          <Analytics />
+          <Analytics mode="production" />
         </div>
       </BrowserRouter >
     </>

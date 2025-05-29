@@ -6,9 +6,10 @@ import type { Dispatch, SetStateAction } from 'react';
 
 interface SearchBarProps {
     setTechStack: Dispatch<SetStateAction<TechItem[]>>;
+    setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
-function SearchBar({ setTechStack }: SearchBarProps) {
+function SearchBar({ setTechStack, setCurrentPage }: SearchBarProps) {
     const navigate = useNavigate();
     const [serachData, setSearchData] = useState({
         searchTerm: '',
@@ -28,7 +29,6 @@ function SearchBar({ setTechStack }: SearchBarProps) {
     //         })
     //     }
     // }, [location.search]);
-
     const filteredTech = useMemo(() => {
         return techStack.filter(tech => {
             const matchesSearch = tech.name.toLowerCase().includes(serachData.searchTerm.toLowerCase());
@@ -68,6 +68,7 @@ function SearchBar({ setTechStack }: SearchBarProps) {
         }
 
         const query = urlParams.toString();
+        setCurrentPage(1);
         navigate(`?${query}`, { replace: true });
     };
     const handleClearFilters = () => {

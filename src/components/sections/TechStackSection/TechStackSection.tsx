@@ -32,7 +32,7 @@ function TechStackSection() {
             id="tech_stack"
             className='about-path flex flex-col justify-center items-center gap-[1rem] bg-primary dark:bg-primary-dark -mt-[20vh] py-[15rem] lg:py-[8rem] text-white'>
             <SectionHeader sectionName="What I Work With" />
-            <SearchBar setTechStack={setTechStackItem} />
+            <SearchBar setTechStack={setTechStackItem} setCurrentPage={setCurrentPage} />
             <div className=" min-h-[285px] md:min-h-[438px] lg:min-h-[388px] grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-[1rem]  p-[1.5rem] ">
                 {currentListing.length > 0 ? (
                     <>

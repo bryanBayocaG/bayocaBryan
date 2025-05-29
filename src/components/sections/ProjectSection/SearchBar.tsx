@@ -8,6 +8,7 @@ import type { Dispatch, SetStateAction } from 'react';
 interface SearchBarProps {
     setProjectItem: Dispatch<SetStateAction<Project[]>>;
     setListPerPage: Dispatch<SetStateAction<number>>;
+    setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
 interface SearchData {
@@ -18,7 +19,7 @@ interface SearchData {
 }
 
 
-function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
+function SearchBar({ setProjectItem, setListPerPage, setCurrentPage }: SearchBarProps) {
     const navigate = useNavigate();
     const webAppCount = projects.filter(project => project.type === "Web App").length;
     const logoDesignCount = projects.filter(project => project.type === "Logo Design").length;
@@ -53,9 +54,11 @@ function SearchBar({ setProjectItem, setListPerPage }: SearchBarProps) {
             setListPerPage(updatedSearchData.numberPerPage);
         }
         const query = urlParams.toString();
+        setCurrentPage(1)
         navigate(`?${query}`, { replace: true });
     }
     const handleTags = (name: string) => {
+        setCurrentPage(1)
         const isAlreadySelected = currentTags.includes(name);
         if (isAlreadySelected) {
             const updateTags = currentTags.filter(tag => tag !== name)

@@ -21,7 +21,7 @@ function ProjectSections() {
             id="my_projects"
             className="flex relative flex-col w-full h-full justify-center gap-[1rem] p-[2rem]">
             <SectionHeader sectionName="Things I’ve Made" />
-            <SearchBar setProjectItem={setProjectItem} setListPerPage={setListPerPage} />
+            <SearchBar setCurrentPage={setCurrentPage} setProjectItem={setProjectItem} setListPerPage={setListPerPage} />
             <div className="flex flex-col gap-[1rem] justify-center items-center">
                 {currentListing.length === 0 && (
                     <NotFound />

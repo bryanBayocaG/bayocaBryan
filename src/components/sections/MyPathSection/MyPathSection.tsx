@@ -150,7 +150,7 @@ function MyPathSection() {
                 <div ref={border3} className="flex justify-center items-center border-2 border-neutral-200 dark:border-white/[0.2] shadow-md lg:col-span-2 rounded-[.5rem]">
                     <div className="flex flex-col items-center justify-center p-[1rem]">
                         <h5>Curently Learning </h5>
-                        <p className="text-center text-[1.5rem]">C#, ASP.NET Core</p>
+                        <p className="text-center text-[1.5rem]">Java, Spring Boot</p>
                     </div>
                 </div>
             </div>

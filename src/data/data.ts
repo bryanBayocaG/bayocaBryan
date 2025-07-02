@@ -361,6 +361,18 @@ export const projects: Project[] = [
     liveUrl: "https://wikibook.vercel.app",
     status: "Done",
   },
+  {
+    id: 10,
+    name: "Coffee-blend Manager",
+    image: "",
+    description:
+      "A secure booking platform built with vanilla PHP and MySQL, featuring robust user authentication and seamless PayPal payment integration. Designed as a personal refresher project to reinforce backend development fundamentals.",
+    type: "Web App",
+    techStack: ["PHP", "Javascript", "CSS", "Bootstrap", "HTML"],
+    sourceCodeUrl: "https://github.com/bryanBayocaG/coffee-blend",
+    liveUrl: "",
+    status: "In-progress",
+  },
 ];
 
 export const certificates: CertificateItem[] = [
